@@ -203,7 +203,7 @@ section.dark-section .list-with-icon li:last-child {
   border-bottom: none;
 }
 section .f-column {
-  padding: 100px;
+  padding: 80px;
 }
 section .f-column p {
   margin-bottom: 25px;
@@ -269,6 +269,7 @@ header .header-right a:hover {
 .title-block {
   display: inline-block;
   width: 100%;
+  margin-bottom: 65px;
 }
 .title-block h4 {
   color: #4a4a4a;
@@ -429,6 +430,22 @@ header .header-right a:hover {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
+}
+.icon-box.numbered > span {
+  color: #f98f31;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100px;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.icon-box.numbered h5 {
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 20px;
 }
 .list-with-icon img {
   display: inline-block;
