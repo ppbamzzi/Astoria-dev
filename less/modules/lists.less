@@ -14,3 +14,18 @@
 		margin-top: 15px;
 	}
 }
+
+ul.with-images{
+	li{
+		width: 50%;
+		display: inline-block;
+		float: left;
+		img{
+			width: 100%;
+			margin-bottom: -2px;
+		}
+		&:nth-child(2n+1){
+			clear: both;
+		}
+	}
+}

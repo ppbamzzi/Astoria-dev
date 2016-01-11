@@ -159,6 +159,12 @@ p {
 .pb-180 {
   padding-bottom: 180px;
 }
+.no-padding {
+  padding: 0 !important;
+}
+.clear {
+  clear: both;
+}
 /*=====  End of Base Styles  ======*/
 .btn-default {
   color: #fff;
@@ -201,6 +207,10 @@ section.dark-section .list-with-icon li {
 }
 section.dark-section .list-with-icon li:last-child {
   border-bottom: none;
+  margin-bottom: 0;
+}
+section.dark-section .list-with-icon li:last-child p {
+  margin-bottom: 0;
 }
 section .f-column {
   padding: 80px;
@@ -460,4 +470,16 @@ header .header-right a:hover {
 }
 .list-with-icon p {
   margin-top: 15px;
+}
+ul.with-images li {
+  width: 50%;
+  display: inline-block;
+  float: left;
+}
+ul.with-images li img {
+  width: 100%;
+  margin-bottom: -2px;
+}
+ul.with-images li:nth-child(2n+1) {
+  clear: both;
 }

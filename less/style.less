@@ -82,6 +82,14 @@ p{
 .pb-180{
 	padding-bottom: 180px;
 }
+
+.no-padding{
+	padding: 0 !important;
+}
+
+.clear{
+	clear: both;
+}
 /*=====  End of Base Styles  ======*/
 
 .btn-default{
@@ -123,6 +131,10 @@ section{
 				margin-bottom: 25px;
 				&:last-child{
 					border-bottom: none;
+					margin-bottom: 0;
+					p{
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
@@ -405,5 +417,20 @@ header{
 	}
 	p{
 		margin-top: 15px;
+	}
+}
+
+ul.with-images{
+	li{
+		width: 50%;
+		display: inline-block;
+		float: left;
+		img{
+			width: 100%;
+			margin-bottom: -2px;
+		}
+		&:nth-child(2n+1){
+			clear: both;
+		}
 	}
 }
