@@ -37,4 +37,65 @@ section{
 			margin-bottom: 25px;
 		}
 	}
+	.chees-block{
+		padding: 0;
+		h3{
+			color: #4a4a4a;
+			font-size: 30px;
+			font-weight: 800;
+			line-height: 32px;
+			margin-bottom: 20px;
+		}
+		p{
+			line-height: 26px;
+			margin-bottom: 50px;
+		}
+		.list-with-icon{
+			width: 50%;
+			display: inline-block;
+			float: left;
+			vertical-align: top;
+			margin-bottom: 30px;
+			li{
+				margin-bottom: 45px;
+				padding-left: 55px;
+				img{
+					top: -5px;
+				}
+			}
+		}
+	}
+	&#most-interesting{
+		background-image: url(../images/image-interesting.jpg);
+		background-size: cover;
+		background-position: center center;
+		padding-bottom: 180px;
+	}
+	.our-projects-bg{
+		background-image: url(../images/image-bg-project.jpg);
+		background-size: cover;
+		background-position: center center;
+	}
+}
+
+@media only screen and (min-width:1400px){
+	.block-right-align{
+		float: right;
+		width: 70%;
+		padding-right: 75px;
+	}
+	.block-left-align{
+		float: left;
+		width: 70%;
+		padding-left: 75px;
+	}
+}
+
+@media only screen and (max-width:1399px){
+	.block-left-align,
+	.block-right-align{
+		width: 100%;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
 }

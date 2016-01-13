@@ -143,3 +143,19 @@
 		background-image: url(../images/icon-chat.png);
 	}
 }
+
+.icon-box-bordered{
+	li{
+		width: 50%;
+		float: left;
+		display: inline-block;
+		padding: 100px 50px;
+		&:nth-child(odd){
+			border-bottom:1px solid #efefef;
+			border-right:1px solid #efefef;
+		}
+		&:nth-child(even){
+			border-bottom:1px solid #efefef;
+		}
+	}
+}

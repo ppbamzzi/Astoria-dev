@@ -22,26 +22,20 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    .col-md-7{
-		-webkit-order: 0;
-		-ms-flex-order: 0;
-		order: 0;
-		-webkit-flex: 2 1 auto;
-		-ms-flex: 2 1 auto;
-		flex: 2 1 auto;
-		-webkit-align-self: auto;
-		-ms-flex-item-align: auto;
-		align-self: auto;
+}
+
+.table-container{
+    display: table;
+    >div{
+        float: none;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0;
     }
-    .col-md-5{
-		-webkit-order: 0;
-		-ms-flex-order: 0;
-		order: 0;
-		-webkit-flex: 1 2 auto;
-		-ms-flex: 1 2 auto;
-		flex: 1 2 auto;
-		-webkit-align-self: auto;
-		-ms-flex-item-align: auto;
-		align-self: auto;
+}
+
+.img-100{
+    img{
+        width: 100%;
     }
 }
