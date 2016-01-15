@@ -58,6 +58,11 @@ a{
 	&:hover{
 		text-decoration: none;
 		outline: none;
+		color: @active-color;
+		.transition();
+	}
+	&.active{
+		color: @active-color;
 	}
 }
 
@@ -80,6 +85,8 @@ textarea.form-control{
 	background-color: transparent;
 	height: 50px;
 	box-shadow: none;
+	border:none;
+	-webkit-appearance:none;
 	&:focus{
 		outline: none;
 		box-shadow: none;

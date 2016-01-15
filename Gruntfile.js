@@ -16,7 +16,8 @@ module.exports = function(grunt) {
           'less/modules/icon-boxes.less',
           'less/modules/lists.less',
           'less/modules/contacts.less',
-          'less/modules/share.less'
+          'less/modules/share.less',
+          'less/modules/footer.less'
         ],
         dest: 'less/style.less',
       },

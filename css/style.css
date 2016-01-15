@@ -184,6 +184,11 @@ a:focus,
 a:hover {
   text-decoration: none;
   outline: none;
+  color: #f98f31;
+  transition: all 0.2s ease-in-out;
+}
+a.active {
+  color: #f98f31;
 }
 img {
   max-width: 100%;
@@ -208,6 +213,8 @@ textarea.form-control {
   background-color: transparent;
   height: 50px;
   box-shadow: none;
+  border: none;
+  -webkit-appearance: none;
 }
 input:focus,
 input.form-control:focus,
@@ -256,6 +263,10 @@ textarea.form-control {
   border: 1px solid rgba(255, 255, 255, 0.6);
   transition: all 0.2s ease-in-out;
 }
+.btn-default:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
 .btn-default.filled {
   background-color: #f98f31;
   border-color: #f98f31;
@@ -269,6 +280,7 @@ section {
   padding-top: 180px;
   display: inline-block;
   width: 100%;
+  float: left;
 }
 section.full-width h6 {
   font-size: 18px;
@@ -358,6 +370,18 @@ section .our-projects-bg {
     width: 100%;
     padding-right: 30px;
     padding-left: 30px;
+  }
+  section .f-column {
+    padding: 55px;
+  }
+  section .f-column p {
+    margin-bottom: 20px;
+  }
+  .list-with-icon li {
+    margin-bottom: 20px;
+  }
+  .list-with-icon li p {
+    margin-top: 10px;
   }
 }
 header {
@@ -492,6 +516,16 @@ header .header-right a:hover {
   font-weight: 700;
   line-height: 34px;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1399px) {
+  .medium-title-block h4 {
+    margin-bottom: 5px;
+    font-size: 13px;
+    letter-spacing: 4px;
+  }
+  .medium-title-block h3 {
+    font-size: 30px;
+  }
 }
 .big-slider {
   text-align: center;
@@ -838,6 +872,21 @@ section .contact-adress .list-with-icon li strong {
   color: #fff;
   padding-right: 3px;
 }
+.cta-title h3 a {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 32px;
+  padding: 70px 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background-color: #82b53f;
+  transition: all 0.2s ease-in-out;
+}
+.cta-title h3 a:hover {
+  background-color: #74a238;
+}
 .share-icons .share-title {
   font-size: 16px;
   font-weight: 400;
@@ -860,4 +909,164 @@ section .contact-adress .list-with-icon li strong {
   width: 32px;
   line-height: 32px;
   border-radius: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.share-icons ul li i:hover {
+  background-color: #f98f31;
+  color: #fff;
+}
+.footer {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  background-color: #222;
+  color: #acacac;
+}
+.footer > .container {
+  padding: 100px 15px;
+}
+.footer .footer-logo {
+  margin-bottom: 30px;
+  display: inline-block;
+}
+.footer p {
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+.footer .post-widget li {
+  margin-bottom: 20px;
+}
+.footer .post-widget li a {
+  color: #acacac;
+  font-size: 13px;
+  line-height: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.footer .post-widget li a:hover {
+  color: #f98f31;
+}
+.footer .post-widget li span {
+  display: block;
+  margin-top: 8px;
+  color: #5c5c5c;
+  line-height: 20px;
+}
+.footer .footer-contacts li {
+  margin-bottom: 10px;
+  line-height: 20px;
+  font-size: 13px;
+}
+.footer .footer-contacts strong {
+  color: #fff;
+}
+.footer .footer-list li {
+  margin-bottom: 15px;
+}
+.footer .footer-list li a {
+  color: #acacac;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  position: relative;
+  padding-left: 16px;
+  transition: all 0.2s ease-in-out;
+}
+.footer .footer-list li a:before {
+  content: "\f105";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  line-height: 22px;
+}
+.footer .footer-list li a:hover {
+  color: #f98f31;
+}
+.footer .twitter-widget li {
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 30px;
+}
+.footer .twitter-widget li p {
+  margin-bottom: 0;
+}
+.footer .twitter-widget li a {
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.footer .twitter-widget li a:hover {
+  color: #f98f31;
+}
+.footer .twitter-widget li a.active {
+  color: #f98f31;
+}
+.footer .twitter-widget li a.active:hover {
+  text-decoration: underline;
+}
+.footer .twitter-widget li:before {
+  content: "\f099";
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-family: FontAwesome;
+  font-size: 18px;
+}
+.footer .twitter-widget li .twitter-date {
+  color: #5c5c5c;
+  margin-top: 8px;
+  display: block;
+  line-height: 20px;
+}
+.footer form {
+  position: relative;
+}
+.footer form input[type="email"] {
+  background-color: #191919;
+  height: 37px;
+  width: 270px;
+  font-size: 11px;
+  padding: 13px 20px;
+}
+.footer form input[type="email"]::-webkit-input-placeholder {
+  color: #acacac;
+  opacity: 0.8;
+}
+.footer form input[type="submit"] {
+  font-size: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(../images/subscribe.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.6;
+  width: 30px;
+  height: 37px;
+  transition: all 0.2s ease-in-out;
+}
+.footer form input[type="submit"]:hover {
+  opacity: 1;
+}
+.footer-widget .widget-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.copyrights {
+  width: 100%;
+  background-color: #191919;
+  padding: 40px 0;
+}
+.copyrights p {
+  margin-bottom: 0;
+}
+.copyrights .share-icons li a i {
+  background-color: #353535;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.2s ease-in-out;
+}
+.copyrights .share-icons li a i:hover {
+  background-color: #f98f31;
 }
