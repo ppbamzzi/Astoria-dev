@@ -6,6 +6,51 @@
 
 .contact-form{
 	background-color: @active-color;
+	h4{
+		font-size: 26px;
+		font-weight: 800;
+		line-height: 32px;
+		color: #fff;
+		margin-bottom: 15px;
+	}
+	p{
+		margin-bottom: 50px;
+	}
+	.form-group{
+		margin-left: 0;
+		margin-right: 0;
+		input,
+		textarea{
+			color: rgba(255, 255, 255, 0.8);
+			font-size: 13px;
+			border:1px solid rgba(255, 255, 255, 0.5);
+			&:focus{
+				border:1px solid rgba(255, 255, 255, 0.8);
+			}
+		}
+		textarea{
+			padding:15px 20px;
+		}
+	}
+	button{
+		margin-top: 35px;
+	}
+	.one-half{
+		width: 50%;
+		display: inline-block;
+		float: left;
+		margin-bottom: 30px;
+		&:first-child{
+			padding-right: 15px;
+		}
+		&:last-child{
+			padding-left: 15px;
+		}
+	}
+	input::-webkit-input-placeholder{color: rgba(255, 255, 255, 0.8);}
+	input:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
+	textarea:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
+	textarea::-webkit-input-placeholder{color: rgba(255, 255, 255, 0.8);}
 }
 
 section .contact-adress{
