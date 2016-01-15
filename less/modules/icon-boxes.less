@@ -148,14 +148,28 @@
 	li{
 		width: 50%;
 		float: left;
-		display: inline-block;
-		padding: 100px 50px;
-		&:nth-child(odd){
-			border-bottom:1px solid #efefef;
-			border-right:1px solid #efefef;
+		padding: 0 50px;
+		height: 315px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: stretch;
+		align-items: center;
+		h5{
+			color: #4a4a4a;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 32px;
+			margin-bottom: 15px;
 		}
-		&:nth-child(even){
-			border-bottom:1px solid #efefef;
+		img{
+			margin-right: 25px;
+			position: relative;
+			top:-35px;
+			float: left;
 		}
+
 	}
 }
+

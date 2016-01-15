@@ -30,6 +30,21 @@
 .img-100 img {
   width: 100%;
 }
+.b-right {
+  border-right: 1px solid #efefef;
+}
+.b-bottom {
+  border-bottom: 1px solid #efefef;
+}
+.b-top {
+  border-top: 1px solid #efefef;
+}
+.b-left {
+  border-left: 1px solid #efefef;
+}
+.color-white {
+  color: #fff !important;
+}
 html,
 body,
 div,
@@ -195,7 +210,10 @@ p {
   margin-bottom: 40px !important;
 }
 .pb-180 {
-  padding-bottom: 180px;
+  padding-bottom: 180px !important;
+}
+.pt-180 {
+  padding-top: 180px !important;
 }
 .no-padding {
   padding: 0 !important;
@@ -300,7 +318,6 @@ section#most-interesting {
 section .our-projects-bg {
   background-image: url(../images/image-bg-project.jpg);
   background-size: cover;
-  background-position: center center;
 }
 @media only screen and (min-width: 1400px) {
   .block-right-align {
@@ -417,6 +434,14 @@ header .header-right a:hover {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
+}
+.title-block.color-white h4,
+.title-block.color-white h2,
+.title-block.color-white p {
+  color: #fff;
+}
+.title-block.color-white p {
+  opacity: 0.8;
 }
 .title-on-dark {
   margin-bottom: 50px;
@@ -614,15 +639,27 @@ header .header-right a:hover {
 .icon-box-bordered li {
   width: 50%;
   float: left;
-  display: inline-block;
-  padding: 100px 50px;
+  padding: 0 50px;
+  height: 315px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
 }
-.icon-box-bordered li:nth-child(odd) {
-  border-bottom: 1px solid #efefef;
-  border-right: 1px solid #efefef;
+.icon-box-bordered li h5 {
+  color: #4a4a4a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 15px;
 }
-.icon-box-bordered li:nth-child(even) {
-  border-bottom: 1px solid #efefef;
+.icon-box-bordered li img {
+  margin-right: 25px;
+  position: relative;
+  top: -35px;
+  float: left;
 }
 .list-with-icon li {
   position: relative;
@@ -702,4 +739,50 @@ ul.big-titles li h5:before {
   left: 0;
   top: 50%;
   margin-top: -2px;
+}
+.contact-adress,
+.contact-form {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.contact-form {
+  background-color: #f98f31;
+}
+section .contact-adress .list-with-icon {
+  margin-bottom: 50px;
+}
+section .contact-adress .list-with-icon li {
+  border-bottom: none;
+  margin-bottom: 50px;
+}
+section .contact-adress .list-with-icon li img {
+  top: -5px;
+}
+section .contact-adress .list-with-icon li strong {
+  text-transform: uppercase;
+  color: #fff;
+  padding-right: 3px;
+}
+.share-icons .share-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #fff;
+  float: left;
+  margin-right: 7px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.share-icons ul li {
+  display: inline-block;
+  margin-left: 7px;
+}
+.share-icons ul li i {
+  font-size: 14px;
+  color: #6f6f6f;
+  text-align: center;
+  background-color: #111;
+  width: 32px;
+  line-height: 32px;
+  border-radius: 100%;
 }
