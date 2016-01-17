@@ -17,7 +17,9 @@ module.exports = function(grunt) {
           'less/modules/lists.less',
           'less/modules/contacts.less',
           'less/modules/share.less',
-          'less/modules/footer.less'
+          'less/modules/progress-bar.less',
+          'less/modules/footer.less',
+          'less/modules/animations.less'
         ],
         dest: 'less/style.less',
       },

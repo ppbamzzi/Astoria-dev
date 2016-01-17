@@ -5,9 +5,12 @@ jQuery(document).ready(function($){
           var b = jQuery(this).find(".progress-bar").attr("data-width");
           jQuery(this).find(".progress-bar").animate({
             width: b + "%"
-          }, 1300, "linear");
+          }, 500, "linear");
         }); 
     });
+});
+jQuery(window).load(function(){'use strict';
+  $(".preloader").delay(1600).fadeOut("slow").remove();
 });
 
 jQuery(document).ready(function() {		
@@ -21,4 +24,21 @@ jQuery(document).ready(function() {
       gridwidth:1230,
       gridheight:720		
     });		
+
+  $('.video-popup').magnificPopup({
+    items: {
+      src: 'https://www.youtube.com/watch?v=Uoa81mxPLq8'
+    },
+    type: 'iframe',
+    mainClass: 'mfp-fade'
+  });
+
+  $('.open-search').magnificPopup({
+    type:'inline',
+    midClick: true,
+    mainClass: 'mfp-fade'
+  });
+  $('.menu-icon').click(function sideMenu () {
+    $('body').toggleClass('menu-opened');
+  })
 });	
