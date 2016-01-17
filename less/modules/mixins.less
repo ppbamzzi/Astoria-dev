@@ -24,6 +24,10 @@
     align-items: center;
 }
 
+.stretch{
+    align-self: stretch;
+}
+
 .table-container{
     display: table;
     >div{
@@ -58,4 +62,10 @@
 
 .color-white{
     color: #fff !important;
+}
+
+@media only screen and (max-width:1200px){
+    .flexbox-container{
+        flex-wrap:wrap;
+    }
 }

@@ -18,6 +18,9 @@
   -ms-flex-align: center;
   align-items: center;
 }
+.stretch {
+  align-self: stretch;
+}
 .table-container {
   display: table;
 }
@@ -44,6 +47,11 @@
 }
 .color-white {
   color: #fff !important;
+}
+@media only screen and (max-width: 1200px) {
+  .flexbox-container {
+    flex-wrap: wrap;
+  }
 }
 html,
 body,
@@ -214,6 +222,7 @@ textarea.form-control {
   height: 50px;
   box-shadow: none;
   border: none;
+  max-width: 100%;
   -webkit-appearance: none;
 }
 input:focus,
@@ -238,10 +247,10 @@ textarea.form-control {
   margin-bottom: 40px !important;
 }
 .pb-180 {
-  padding-bottom: 180px !important;
+  padding-bottom: 7vw !important;
 }
 .pt-180 {
-  padding-top: 180px !important;
+  padding-top: 7vw !important;
 }
 .no-padding {
   padding: 0 !important;
@@ -277,7 +286,7 @@ textarea.form-control {
   border-color: #f07507;
 }
 section {
-  padding-top: 180px;
+  padding-top: 7vw;
   display: inline-block;
   width: 100%;
   float: left;
@@ -309,7 +318,7 @@ section.dark-section .list-with-icon li:last-child p {
   margin-bottom: 0;
 }
 section .f-column {
-  padding: 80px;
+  padding: 3.3vw;
 }
 section .f-column p {
   margin-bottom: 25px;
@@ -346,7 +355,7 @@ section#most-interesting {
   background-image: url(../images/image-interesting.jpg);
   background-size: cover;
   background-position: center center;
-  padding-bottom: 180px;
+  padding-bottom: 7vw;
 }
 section .our-projects-bg {
   background-image: url(../images/image-bg-project.jpg);
@@ -370,6 +379,8 @@ section .our-projects-bg {
     width: 100%;
     padding-right: 30px;
     padding-left: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   section .f-column {
     padding: 55px;
@@ -560,7 +571,7 @@ header .header-right a:hover {
 .icon-box.filled {
   background-color: #f98f31;
   color: #fff;
-  padding: 80px;
+  padding: 3.2vw;
 }
 .icon-box.filled .img-wrap {
   height: 62px;
@@ -587,21 +598,23 @@ header .header-right a:hover {
 .icon-box.filled.filled-10 {
   background-color: #f07507;
 }
-.bordered-banner img {
-  width: 100%;
+.bordered-banner {
+  background-image: url(../images/image-bg.jpg);
+  background-size: cover;
+  background-position: center center;
 }
 .bordered-mask {
   position: absolute;
-  left: 130px;
-  right: 130px;
-  top: 110px;
-  bottom: 110px;
+  left: 5vw;
+  right: 5vw;
+  top: 4.3vw;
+  bottom: 4.3vw;
   border: 15px solid #fff;
 }
 .bordered-mask .bordered-mask-wrap {
   position: absolute;
   top: 50%;
-  padding: 50px;
+  padding: 2vw;
   transform: translateY(-50%);
   text-align: center;
   color: #fff;
@@ -646,8 +659,7 @@ header .header-right a:hover {
   margin-bottom: 20px;
 }
 .filled-box {
-  padding: 100px 55px;
-  width: 25%;
+  padding: 4vw 2vw;
   background-position: right bottom;
   background-repeat: no-repeat;
 }
@@ -715,6 +727,11 @@ header .header-right a:hover {
   position: relative;
   top: -35px;
   float: left;
+}
+@media only screen and (max-width: 1399px) {
+  .bordered-mask {
+    border: none;
+  }
 }
 .list-with-icon li {
   position: relative;
@@ -794,6 +811,27 @@ ul.big-titles li h5:before {
   left: 0;
   top: 50%;
   margin-top: -2px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  ul.with-images li {
+    width: 33.33%;
+  }
+  ul.with-images li:nth-child(2n+1) {
+    clear: none;
+  }
+  ul.with-images li:nth-child(3n+1) {
+    clear: both;
+  }
+  ul.with-images li:last-child {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .icon-box-bordered li {
+    width: 100%;
+    border-right: none !important;
+    border-bottom: 1px solid #efefef;
+  }
 }
 .contact-adress,
 .contact-form {
