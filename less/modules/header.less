@@ -22,33 +22,6 @@ header{
 		position: absolute;
 		right: 0;
 	}
-	.main-menu{
-		li{
-			display: inline-block;
-			float: left;
-			a{
-				font-family: 'Raleway', sans-serif;
-				color: #fff;
-				padding: 39px 25px;
-				font-size: 13px;
-				font-weight: 600;
-				display: inline-block;
-				text-transform: uppercase;
-				.transition();
-				&:hover{
-					background-color: @active-color;
-				}
-			}
-			&.current-parent{
-				a{
-					background-color: @active-color;
-					&:hover{
-						background-color: darken(@active-color, 10%);
-					}
-				}
-			}
-		}
-	}
 	.header-right{
 		a,
 		div.menu-icon{

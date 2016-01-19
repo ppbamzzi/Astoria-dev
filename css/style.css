@@ -427,29 +427,6 @@ header .header-right {
   position: absolute;
   right: 0;
 }
-header .main-menu li {
-  display: inline-block;
-  float: left;
-}
-header .main-menu li a {
-  font-family: 'Raleway', sans-serif;
-  color: #fff;
-  padding: 39px 25px;
-  font-size: 13px;
-  font-weight: 600;
-  display: inline-block;
-  text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
-}
-header .main-menu li a:hover {
-  background-color: #f98f31;
-}
-header .main-menu li.current-parent a {
-  background-color: #f98f31;
-}
-header .main-menu li.current-parent a:hover {
-  background-color: #f07507;
-}
 header .header-right a,
 header .header-right div.menu-icon {
   padding: 36px;
@@ -495,6 +472,79 @@ header .header-right div.menu-icon:hover {
 }
 .menu-icon #nav-icon span:nth-child(4) {
   top: 16px;
+}
+.main-menu ul > li {
+  display: inline-block;
+  float: left;
+  position: relative;
+}
+.main-menu ul > li > a {
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  padding: 39px 25px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.main-menu ul > li > a:hover {
+  background-color: #f98f31;
+}
+.main-menu ul > li.current-parent > a {
+  background-color: #f98f31;
+}
+.main-menu ul > li.current-parent > a:hover {
+  background-color: #f07507;
+}
+.main-menu .sub-menu {
+  position: absolute;
+  visibility: hidden;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  width: 360px;
+  padding: 25px 40px;
+  background-color: rgba(34, 34, 34, 0.95);
+}
+.main-menu .sub-menu li {
+  display: block;
+  float: none;
+}
+.main-menu .sub-menu li a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  font-weight: 400;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+}
+.main-menu .sub-menu li a:hover {
+  color: #fff;
+  background-color: transparent;
+}
+.main-menu ul > li:hover > .sub-menu {
+  visibility: visible;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+.main-menu .sub-menu li {
+  position: relative;
+}
+.main-menu .sub-menu li:after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  width: 100px;
+  height: 60px;
+  top: 0;
+}
+.main-menu .sub-menu li ul {
+  background-color: rgba(41, 41, 41, 0.95);
+  position: absolute;
+  top: 0;
+  right: -100%;
+  transform: translate3d(122px, -25px, 0);
 }
 .side-menu {
   width: 300px;
