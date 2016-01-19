@@ -196,9 +196,6 @@ a:hover {
   color: #f98f31;
   transition: all 0.2s ease-in-out;
 }
-a.active {
-  color: #f98f31;
-}
 img {
   max-width: 100%;
   height: auto;
@@ -217,7 +214,8 @@ p {
 input,
 input.form-control,
 textarea,
-textarea.form-control {
+textarea.form-control,
+button {
   border-radius: 0;
   background-color: transparent;
   height: 50px;
@@ -229,7 +227,8 @@ textarea.form-control {
 input:focus,
 input.form-control:focus,
 textarea:focus,
-textarea.form-control:focus {
+textarea.form-control:focus,
+button:focus {
   outline: none;
   box-shadow: none;
   border-color: #b3b3b3;
@@ -237,6 +236,12 @@ textarea.form-control:focus {
 textarea,
 textarea.form-control {
   height: auto;
+}
+button {
+  height: auto;
+}
+.active {
+  color: #f98f31;
 }
 .mb70 {
   margin-bottom: 70px;
@@ -445,16 +450,142 @@ header .main-menu li.current-parent a {
 header .main-menu li.current-parent a:hover {
   background-color: #f07507;
 }
-header .header-right a {
+header .header-right a,
+header .header-right div.menu-icon {
   padding: 36px;
   height: 91px;
   display: block;
   float: left;
+  cursor: pointer;
   border-left: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.2s ease-in-out;
 }
-header .header-right a:hover {
+header .header-right a:hover,
+header .header-right div.menu-icon:hover {
   background-color: #f98f31;
+}
+.menu-icon {
+  transition: all 0.2s ease-in-out;
+  transform: translate3d(0, 0, 0);
+  position: relative;
+}
+.menu-icon #nav-icon {
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  width: 25px;
+}
+.menu-icon #nav-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+.menu-icon #nav-icon span:nth-child(1) {
+  top: 0px;
+}
+.menu-icon #nav-icon span:nth-child(2),
+.menu-icon #nav-icon span:nth-child(3) {
+  top: 8px;
+}
+.menu-icon #nav-icon span:nth-child(4) {
+  top: 16px;
+}
+.side-menu {
+  width: 300px;
+  background-color: #222;
+  position: fixed;
+  right: 0;
+  padding: 25px 45px;
+  height: 100%;
+  z-index: 100;
+  text-align: center;
+  transform: translate3d(300px, 0, 0);
+  transition: all 0.2s ease-in-out;
+}
+.side-menu a {
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.side-menu .inner-menu {
+  padding-top: 14vh;
+  padding-bottom: 14vh;
+}
+.side-menu .inner-menu li a {
+  padding: 1.5vh 0;
+  font-size: 18px;
+  display: inline-block;
+}
+.side-menu .inner-menu li a:hover {
+  color: #f98f31;
+}
+.side-menu .side-menu-search {
+  position: relative;
+}
+.side-menu .side-menu-search input[type="search"] {
+  width: 100%;
+  height: 40px;
+  font-size: 11px;
+  line-height: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.side-menu .side-menu-search input[type="search"]:focus {
+  border: 1px solid #fff;
+}
+.side-menu .side-menu-search button {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 39px;
+  color: #fff;
+}
+.side-menu .share-icons {
+  margin-top: 4vh;
+}
+.side-menu .share-icons li {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.side-menu .menu-copyrights {
+  margin-top: 4vh;
+  line-height: 20px;
+  color: #898989;
+  font-size: 13px;
+}
+.menu-opened .menu-icon {
+  transform: translate3d(-300px, 0, 0) !important;
+  background-color: #f98f31;
+  position: fixed;
+  right: 0;
+}
+.menu-opened .menu-icon #nav-icon span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.menu-opened .menu-icon #nav-icon span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.menu-opened .menu-icon #nav-icon span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.menu-opened .menu-icon #nav-icon span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.menu-opened .side-menu {
+  transform: translate3d(0, 0, 0);
 }
 .title-block {
   display: inline-block;
@@ -967,6 +1098,7 @@ section .contact-adress .list-with-icon li strong {
   background-color: #f98f31;
   overflow: visible;
   text-align: right;
+  box-shadow: none;
 }
 .skills .progress-bar span {
   color: #4a4a4a;

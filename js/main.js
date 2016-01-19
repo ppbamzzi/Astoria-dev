@@ -38,6 +38,8 @@ jQuery(document).ready(function() {
     midClick: true,
     mainClass: 'mfp-fade'
   });
+  
+  /* Side Menu */
   $('.menu-icon').click(function sideMenu () {
     $('body').toggleClass('menu-opened');
   })

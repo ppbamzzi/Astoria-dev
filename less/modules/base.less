@@ -62,9 +62,6 @@ a{
 		color: @active-color;
 		.transition();
 	}
-	&.active{
-		color: @active-color;
-	}
 }
 
 img{
@@ -81,7 +78,8 @@ p{
 input,
 input.form-control,
 textarea,
-textarea.form-control{
+textarea.form-control,
+button{
 	border-radius: 0;
 	background-color: transparent;
 	height: 50px;
@@ -99,6 +97,14 @@ textarea.form-control{
 textarea,
 textarea.form-control{
 	height: auto;
+}
+
+button{
+	height: auto;
+}
+
+.active{
+	color: @active-color;
 }
 
 .mb70{

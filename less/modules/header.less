@@ -50,16 +50,52 @@ header{
 		}
 	}
 	.header-right{
-		a{
+		a,
+		div.menu-icon{
 			padding: 36px;
 			height: 91px;
 			display: block;
 			float: left;
+			cursor:pointer;
 			border-left:1px solid rgba(255, 255, 255, 0.15);
 			.transition();
 			&:hover{
 				background-color: @active-color;
 			}
+		}
+	}
+}
+
+.menu-icon{
+	.transition();
+	transform:translate3d(0,0,0);
+	position: relative;
+	#nav-icon{
+		transform: rotate(0deg);
+		transition: .5s ease-in-out;
+		cursor: pointer;
+		width: 25px;
+		span{
+			display: block;
+			position: absolute;
+			height: 3px;
+			width: 100%;
+			background: #fff;
+			opacity: 1;
+			left: 0;
+			transform: rotate(0deg);
+			transition: .25s ease-in-out;
+		}
+		span:nth-child(1) {
+		top: 0px;
+		}
+
+		span:nth-child(2),span:nth-child(3) {
+		top: 8px;
+		}
+
+		span:nth-child(4) {
+		top: 16px;
 		}
 	}
 }
