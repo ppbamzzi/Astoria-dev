@@ -26,6 +26,7 @@ jQuery(document).ready(function() {
     });		
 
   $('.video-popup').magnificPopup({
+    removalDelay: 500,
     items: {
       src: 'https://www.youtube.com/watch?v=Uoa81mxPLq8'
     },
@@ -34,8 +35,10 @@ jQuery(document).ready(function() {
   });
 
   $('.open-search').magnificPopup({
-    type:'inline',
-    midClick: true,
+   removalDelay: 500,
+
+    // Class that is added to popup wrapper and background
+    // make it unique to apply your CSS animations just to this exact popup
     mainClass: 'mfp-fade'
   });
   

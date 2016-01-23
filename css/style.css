@@ -473,6 +473,56 @@ header .header-right div.menu-icon:hover {
 .menu-icon #nav-icon span:nth-child(4) {
   top: 16px;
 }
+#search-popup {
+  width: 720px;
+  margin: 0 auto;
+}
+#search-popup form {
+  position: relative;
+}
+#search-popup input[type="search"] {
+  width: 100%;
+  border: none;
+  font-size: 22px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-right: 40px;
+}
+#search-popup input::-webkit-input-placeholder {
+  color: #fff;
+}
+#search-popup input[type="submit"] {
+  background-image: url(../images/search-icon.svg);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.9;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
 .main-menu ul > li {
   display: inline-block;
   float: left;
