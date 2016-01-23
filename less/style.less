@@ -70,6 +70,16 @@
     }
 }
 
+@media only screen and(max-width:992px){
+    .table-container{
+        >div{
+            display: inline-block;
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -346,6 +356,13 @@ section{
 		}
 	}
 }
+
+@media only screen and (max-width:992px){
+	section .our-projects-bg{
+		display: block;
+		padding: 50px 0;
+	}
+}
 header.header{
 	position: fixed;
 	top: 0;
@@ -506,6 +523,10 @@ header.header{
 @media only screen and (max-width:1200px){
 	header.header .main-menu{
 		display: none;
+	}
+	#search-popup{
+		max-width: 100%;
+		padding: 0 30px;
 	}
 }
 .main-menu{
@@ -828,6 +849,14 @@ header.header{
 		}
 	}
 }
+
+@media only screen and (max-width:992px){
+	.slider-mask{
+		.title-block h2{
+			font-size: 46px;
+		}
+	}
+}
 .icon-box{
 	&.filled{
 		background-color: @active-color;
@@ -1007,6 +1036,12 @@ header.header{
 		border:none;
 	}
 }
+
+@media only screen and (max-width:768px){
+	.icon-box.numbered{
+		margin-bottom: 40px;
+	}
+}
 .list-with-icon{
 	li{
 		position: relative;
@@ -1130,6 +1165,15 @@ ul.big-titles{
 @media only screen and (max-width:1024px){
 	.icon-box-bordered li{
 		height: 260px;
+	}
+}
+
+@media only screen and (max-width:992px){
+	.icon-box-bordered li{
+		height: 220px;
+		img{
+			top: 0;
+		}
 	}
 }
 .contact-adress,
@@ -1468,6 +1512,12 @@ section .contact-adress{
 				}
 			}
 		}
+	}
+}
+
+@media only screen and (max-width:992px){
+	.footer-widget{
+		margin-bottom: 40px;
 	}
 }
 .preloader{
