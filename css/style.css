@@ -402,33 +402,38 @@ section .our-projects-bg {
     margin-top: 10px;
   }
 }
-header {
-  position: absolute;
+header.header {
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  min-height: 91px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
   z-index: 1;
+  transition: all 0.2s ease-in-out;
 }
-header .logo,
-header .main-menu,
-header .header-right {
+header.header .logo,
+header.header .main-menu,
+header.header .header-right {
   display: inline-block;
   margin-bottom: -2px;
 }
-header .logo {
+header.header .logo {
   position: absolute;
   left: 50px;
   top: 50%;
   transform: translateY(-50%);
 }
-header .header-right {
+header.header .logo img.fixed-logo {
+  display: none;
+}
+header.header .header-right {
   position: absolute;
   right: 0;
 }
-header .header-right a,
-header .header-right div.menu-icon {
+header.header .header-right a,
+header.header .header-right div.menu-icon {
   padding: 36px;
   height: 91px;
   display: block;
@@ -437,9 +442,47 @@ header .header-right div.menu-icon {
   border-left: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.2s ease-in-out;
 }
-header .header-right a:hover,
-header .header-right div.menu-icon:hover {
+header.header .header-right a:hover,
+header.header .header-right div.menu-icon:hover {
   background-color: #f98f31;
+}
+header.header .header-search span {
+  background-image: url(../images/search-sprite.png);
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 20px;
+  background-position: -5px -5px;
+  display: block;
+}
+header.header.fixed {
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 100;
+}
+header.header.fixed a {
+  color: #5f5f5f;
+}
+header.header.fixed .header-right a,
+header.header.fixed .header-right div.menu-icon {
+  border-left: 1px solid #e6e6e6;
+}
+header.header.fixed .logo img {
+  display: none;
+}
+header.header.fixed .logo .fixed-logo {
+  display: block;
+}
+header.header.fixed .header-search span {
+  background-position: -34px -5px;
+}
+header.header.fixed .header-search:hover span {
+  background-position: -5px -5px;
+}
+header.header.fixed .menu-icon #nav-icon span {
+  background: #5f5f5f;
+}
+header.header.fixed .menu-icon:hover span {
+  background: #fff !important;
 }
 .menu-icon {
   transition: all 0.2s ease-in-out;
@@ -501,32 +544,16 @@ header .header-right div.menu-icon:hover {
   right: 0;
   top: 8px;
 }
-.mfp-fade.mfp-bg {
-  opacity: 0;
-  transition: all 0.15s ease-out;
-}
-.mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.9;
-}
-.mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0;
-}
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
-}
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0;
+@media only screen and (max-width: 1200px) {
+  header.header .main-menu {
+    display: none;
+  }
 }
 .main-menu ul > li {
   display: inline-block;
   float: left;
   position: relative;
+  margin-bottom: -1px;
 }
 .main-menu ul > li > a {
   font-family: 'Raleway', sans-serif;
@@ -540,14 +567,17 @@ header .header-right div.menu-icon:hover {
 }
 .main-menu ul > li > a:hover {
   background-color: #f98f31;
+  color: #fff;
 }
 .main-menu ul > li.current-parent > a {
   background-color: #f98f31;
+  color: #fff;
 }
 .main-menu ul > li.current-parent > a:hover {
   background-color: #f07507;
 }
-.main-menu .sub-menu {
+.main-menu .sub-menu,
+.main-menu .mega-menu {
   position: absolute;
   visibility: hidden;
   text-align: left;
@@ -557,11 +587,13 @@ header .header-right div.menu-icon:hover {
   padding: 25px 40px;
   background-color: rgba(34, 34, 34, 0.95);
 }
-.main-menu .sub-menu li {
+.main-menu .sub-menu li,
+.main-menu .mega-menu li {
   display: block;
   float: none;
 }
-.main-menu .sub-menu li a {
+.main-menu .sub-menu li a,
+.main-menu .mega-menu li a {
   color: rgba(255, 255, 255, 0.6);
   font-size: 13px;
   font-weight: 400;
@@ -569,11 +601,13 @@ header .header-right div.menu-icon:hover {
   width: 100%;
   text-transform: uppercase;
 }
-.main-menu .sub-menu li a:hover {
+.main-menu .sub-menu li a:hover,
+.main-menu .mega-menu li a:hover {
   color: #fff;
   background-color: transparent;
 }
-.main-menu ul > li:hover > .sub-menu {
+.main-menu ul > li:hover > .sub-menu,
+.main-menu ul > li:hover > .mega-menu {
   visibility: visible;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -596,6 +630,23 @@ header .header-right div.menu-icon:hover {
   right: -100%;
   transform: translate3d(122px, -25px, 0);
 }
+.main-menu .mega-menu {
+  width: 1045px;
+  transform: translateX(-10vw);
+}
+.main-menu .mega-menu > li {
+  width: 240px;
+  display: inline-block;
+  float: left;
+}
+.main-menu .mega-menu > li > a {
+  font-size: 14px;
+  font-weight: 900;
+  color: #fff;
+}
+.main-menu .mega-menu > li a {
+  padding: 18px 0;
+}
 .side-menu {
   width: 300px;
   background-color: #222;
@@ -603,7 +654,7 @@ header .header-right div.menu-icon:hover {
   right: 0;
   padding: 25px 45px;
   height: 100%;
-  z-index: 100;
+  z-index: 101;
   text-align: center;
   transform: translate3d(300px, 0, 0);
   transition: all 0.2s ease-in-out;
@@ -667,6 +718,9 @@ header .header-right div.menu-icon:hover {
   background-color: #f98f31;
   position: fixed;
   right: 0;
+}
+.menu-opened .menu-icon #nav-icon span {
+  background: #fff !important;
 }
 .menu-opened .menu-icon #nav-icon span:nth-child(1) {
   top: 18px;
@@ -770,6 +824,11 @@ header .header-right div.menu-icon:hover {
   }
   .medium-title-block h3 {
     font-size: 30px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .title-block h2 {
+    font-size: 48px;
   }
 }
 .slider-mask .title-block h4 {
@@ -1052,6 +1111,14 @@ ul.big-titles li h5:before {
     border-right: none !important;
     border-bottom: 1px solid #efefef;
   }
+  ul.big-titles li h5 {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .icon-box-bordered li {
+    height: 260px;
+  }
 }
 .contact-adress,
 .contact-form {
@@ -1145,6 +1212,11 @@ section .contact-adress .list-with-icon li strong {
 .cta-title h3 a:hover {
   background-color: #74a238;
 }
+@media only screen and (max-width: 1024px) {
+  .contact-form h4 {
+    font-size: 22px;
+  }
+}
 .share-icons .share-title {
   font-size: 16px;
   font-weight: 400;
@@ -1206,6 +1278,11 @@ section .contact-adress .list-with-icon li strong {
   font-weight: 700;
   position: relative;
   top: -32px;
+}
+@media only screen and (max-width: 1200px) {
+  .skills .text {
+    padding-right: 10px;
+  }
 }
 .footer {
   display: inline-block;
@@ -1608,4 +1685,26 @@ nav#right-menu {
   border-radius: 0;
   border-right: 1px solid #000;
   outline: 0;
+}
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.9;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
 }

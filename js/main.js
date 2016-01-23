@@ -1,11 +1,11 @@
 jQuery(document).ready(function($){
 	    jQuery('.skills li').each(function () {
         jQuery(this).appear(function() {
-          jQuery(this).animate({opacity:1,left:"0px"},800);
+          jQuery(this).animate({opacity:1,left:"0px"},1000);
           var b = jQuery(this).find(".progress-bar").attr("data-width");
           jQuery(this).find(".progress-bar").animate({
             width: b + "%"
-          }, 500, "linear");
+          }, 600, "linear");
         }); 
     });
 });
@@ -46,4 +46,22 @@ jQuery(document).ready(function() {
   $('.menu-icon').click(function sideMenu () {
     $('body').toggleClass('menu-opened');
   })
+
+  /* Fixed Header */
+  $(function(){
+   var shrinkHeader = $('.header').outerHeight();
+    $(window).scroll(function() {
+      var scroll = getCurrentScroll();
+        if ( scroll >= shrinkHeader ) {
+             $('.header').addClass('fixed');
+          }
+          else {
+              $('.header').removeClass('fixed');
+          }
+    });
+  function getCurrentScroll() {
+      return window.pageYOffset || document.documentElement.scrollTop;
+      }
+  });
+
 });	
