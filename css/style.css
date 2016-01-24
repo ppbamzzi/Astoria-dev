@@ -1,21 +1,9 @@
 .flexbox-container {
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
   align-content: stretch;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .stretch {
@@ -271,6 +259,14 @@ button {
 .clear {
   clear: both;
 }
+@media only screen and (max-width: 480px) {
+  .pb-180 {
+    padding-bottom: 10vw !important;
+  }
+  .pt-180 {
+    padding-top: 10vw !important;
+  }
+}
 /*=====  End of Base Styles  ======*/
 .btn-default {
   color: #fff;
@@ -413,6 +409,11 @@ section .our-projects-bg {
   section .our-projects-bg {
     display: block;
     padding: 50px 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  section {
+    padding-top: 12vw;
   }
 }
 header.header {
@@ -564,6 +565,16 @@ header.header.fixed .menu-icon:hover span {
   #search-popup {
     max-width: 100%;
     padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  header.header .logo {
+    max-width: 140px;
+    left: 15px;
+  }
+  header.header .header-right a,
+  header.header .header-right div.menu-icon {
+    padding: 36px 15px;
   }
 }
 .main-menu ul > li {
@@ -848,6 +859,16 @@ header.header.fixed .menu-icon:hover span {
     font-size: 48px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .title-block h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  .title-block h4 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}
 .slider-mask .title-block h4 {
   color: #fff;
   font-size: 14px;
@@ -867,6 +888,17 @@ header.header.fixed .menu-icon:hover span {
 @media only screen and (max-width: 992px) {
   .slider-mask .title-block h2 {
     font-size: 46px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .slider-mask .title-block h4 {
+    font-size: 13px;
+  }
+  .slider-mask .title-block h2 {
+    font-size: 24px;
+  }
+  .slider-mask .title-block p {
+    font-size: 13px;
   }
 }
 .icon-box.filled {
@@ -1039,6 +1071,15 @@ header.header.fixed .menu-icon:hover span {
     margin-bottom: 40px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .icon-box-bordered li {
+    height: auto;
+    padding: 30px;
+  }
+  .filled-box {
+    padding: 12vw 4vw;
+  }
+}
 .list-with-icon li {
   position: relative;
   padding-left: 50px;
@@ -1155,6 +1196,21 @@ ul.big-titles li h5:before {
     top: 0;
   }
 }
+@media only screen and (max-width: 480px) {
+  section .chees-block .list-with-icon {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  ul.big-titles li {
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 30px;
+  }
+  ul.big-titles li p {
+    margin-bottom: 0;
+  }
+}
 .contact-adress,
 .contact-form {
   padding-left: 100px;
@@ -1252,6 +1308,21 @@ section .contact-adress .list-with-icon li strong {
     font-size: 22px;
   }
 }
+@media only screen and (max-width: 480px) {
+  .contact-adress,
+  .contact-form {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .cta-title h3 a {
+    font-size: 24px;
+    padding: 50px 30px;
+    line-height: 36px;
+  }
+  .contact-form button {
+    margin-top: 15px;
+  }
+}
 .share-icons .share-title {
   font-size: 16px;
   font-weight: 400;
@@ -1279,6 +1350,16 @@ section .contact-adress .list-with-icon li strong {
 .share-icons ul li i:hover {
   background-color: #f98f31;
   color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .share-icons .share-title {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .share-icons li:first-child {
+    margin-left: 0;
+  }
 }
 .skills .text {
   font-size: 16px;
@@ -1477,6 +1558,20 @@ section .contact-adress .list-with-icon li strong {
 @media only screen and (max-width: 992px) {
   .footer-widget {
     margin-bottom: 40px;
+  }
+  .footer-widget:last-child {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer > .container {
+    padding: 50px 30px;
+  }
+  .copyrights .col-md-6 {
+    text-align: center;
+  }
+  .copyrights .col-md-6:first-child {
+    margin-bottom: 10px;
   }
 }
 .preloader {

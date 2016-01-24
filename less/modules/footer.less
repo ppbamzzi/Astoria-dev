@@ -169,5 +169,22 @@
 @media only screen and (max-width:992px){
 	.footer-widget{
 		margin-bottom: 40px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media only screen and (max-width:480px){
+	.footer > .container{
+		padding: 50px 30px;
+	}
+	.copyrights{
+		.col-md-6{
+			text-align: center;
+			&:first-child{
+				margin-bottom: 10px;
+			}
+		}
 	}
 }
