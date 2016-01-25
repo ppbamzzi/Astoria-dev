@@ -14,7 +14,7 @@ jQuery(window).load(function(){'use strict';
 });
 
 jQuery(document).ready(function() {		
-   /*jQuery("#slider1").revolution({
+   jQuery("#slider1").revolution({
       sliderType:"standard",
       sliderLayout:"fullscreen",
       delay:8000,
@@ -23,7 +23,7 @@ jQuery(document).ready(function() {
       },			
       gridwidth:1230,
       gridheight:720		
-    });		*/
+    });		
 
   $('.video-popup').magnificPopup({
     removalDelay: 500,
