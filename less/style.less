@@ -366,6 +366,9 @@ section{
 	section{
 		padding-top: 12vw;
 	}
+	section .f-column{
+		padding: 40px 15px;
+	}
 }
 header.header{
 	position: fixed;
@@ -542,6 +545,21 @@ header.header{
 	header.header .header-right a, 
 	header.header .header-right div.menu-icon{
 		padding: 36px 15px;
+	}
+}
+
+@media only screen and (max-width:768px){
+	header.fixed{
+		min-height: 60px;
+		.fixed-logo{
+			max-height: 41px;
+			width: auto;
+		}
+		.header-right a,
+		.header-right div.menu-icon{
+			height: 60px;
+			padding: 20px;
+		}
 	}
 }
 .main-menu{
@@ -751,6 +769,16 @@ header.header{
 		transform:translate3d(0,0,0);
 	}
 }
+
+@media only screen and (max-width:480px){
+	.side-menu{
+		width: 240px;
+		padding: 25px 15px;
+	}
+	.menu-opened .menu-icon{
+    	transform: translate3d(-240px, 0, 0) !important
+	}
+}
 .title-block{
 	display: inline-block;
 	width: 100%;
@@ -853,6 +881,9 @@ header.header{
 		font-size: 13px;
 		margin-bottom: 10px;
 	}
+	.title-block.color-white p{
+		padding: 0 15px;
+	}
 }
 .slider-mask{
 
@@ -894,6 +925,8 @@ header.header{
 		}
 		p{
 			font-size: 13px;
+			width: 280px;
+			padding: 0 15px;
 		}
 	}
 }
@@ -1085,11 +1118,14 @@ header.header{
 
 @media only screen and (max-width:480px){
 	.icon-box-bordered li{
-		height: auto;
+		height: auto !important;
 		padding: 30px;
 	}
 	.filled-box{
 		padding: 12vw 4vw;
+	}
+	.icon-box.filled{
+		padding: 40px 15px;
 	}
 }
 .list-with-icon{
