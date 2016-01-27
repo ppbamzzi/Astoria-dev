@@ -356,10 +356,9 @@ section .chees-block .list-with-icon {
 }
 section .chees-block .list-with-icon li {
   margin-bottom: 45px;
-  padding-left: 55px;
 }
-section .chees-block .list-with-icon li img {
-  top: -5px;
+section .chees-block .list-with-icon li [class^="icon-"] {
+  top: -9px;
 }
 section#most-interesting {
   background-image: url(../images/image-interesting.jpg);
@@ -941,6 +940,9 @@ header.header.fixed .menu-icon:hover span {
   height: 62px;
   margin-bottom: 20px;
 }
+.icon-box.filled [class^="icon-"] {
+  font-size: 62px;
+}
 .icon-box.filled img {
   max-height: 100%;
   width: auto;
@@ -1118,9 +1120,11 @@ header.header.fixed .menu-icon:hover span {
   position: relative;
   padding-left: 50px;
 }
-.list-with-icon img {
+.list-with-icon [class^="icon-"] {
   position: absolute;
   left: 0;
+  font-size: 30px;
+  margin-right: 5px;
 }
 .list-with-icon h5 {
   display: inline-block;
