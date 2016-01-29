@@ -1222,6 +1222,58 @@ ul.with-images li img {
 ul.with-images li:nth-child(2n+1) {
   clear: both;
 }
+ul.with-images li > a {
+  position: relative;
+  display: block;
+}
+ul.with-images li > a:before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(17, 17, 17, 0.5);
+  cursor: pointer;
+}
+ul.with-images li .image-mask {
+  position: absolute;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  background-color: #f98f31;
+  left: 3vw;
+  right: 3vw;
+  top: 3vw;
+  bottom: 3vw;
+  z-index: 2;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+}
+ul.with-images li .image-mask h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+  margin-bottom: 10px;
+}
+ul.with-images li .image-mask p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+}
+ul.with-images li:hover .image-mask {
+  opacity: 1;
+}
+ul.with-images li:hover a:before {
+  opacity: 1;
+}
 ul.dotted {
   margin-bottom: 40px;
 }
