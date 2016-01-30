@@ -2,6 +2,9 @@
 .transition(){
 	transition: all 0.2s ease-in-out;
 }
+
+
+
 .flexbox-container{
     display: flex;
     flex-direction: row;
@@ -1198,6 +1201,25 @@ header.header-type-2{
 	}
 }
 
+.block-with-icon{
+	margin-bottom: 40px;
+	img{
+		float: left;
+		margin-right: 20px;
+		margin-top: 10px;
+	}
+	span{
+		font-size: 16px;
+		line-height: 32px;
+		display: block;
+		b{
+			font-size: 28px;
+			font-weight: bold;
+			color: @active-color;
+		}
+	}
+}
+
 @media only screen and (max-width:1399px){
 	.bordered-mask{
 		border:none;
@@ -1220,6 +1242,39 @@ header.header-type-2{
 	}
 	.icon-box.filled{
 		padding: 40px 15px;
+	}
+}
+.banner{
+	position: relative;
+	margin:30px 15px;
+	.banner-wrap{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 2.5vw;
+		h5,h3,p{
+			color: #fff;
+		}
+		h5{
+			font-size: 14px;
+			text-transform: uppercase;
+			font-weight: 500;
+			line-height: 28px;
+			letter-spacing: 5px;
+			margin-bottom: 10px;
+		}
+		h3{
+			font-size: 30px;
+			line-height: 24px;
+			text-transform: capitalize;
+			font-weight: 600;
+			letter-spacing: 1px;
+			margin-bottom: 20px;
+		}
+		p{
+			font-family: "Open Sans", sans-serif;
+			opacity: 0.8;
+		}
 	}
 }
 .list-with-icon{
@@ -1255,6 +1310,67 @@ ul.with-images{
 		}
 		&:nth-child(2n+1){
 			clear: both;
+		}
+		>a{
+			position: relative;
+			display: block;
+			&:before{
+				content: "";
+				position: absolute;
+				opacity: 0;
+				.transition();
+				right: 0;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+				background-color: rgba(17,17,17,0.5);
+				cursor: pointer;
+			}
+		}
+		.image-mask{
+			position: absolute;
+			opacity: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.transition();
+			background-color: @active-color;
+			left: 3vw;
+			right: 3vw;
+			top: 3vw;
+			bottom: 3vw;
+			z-index: 2;
+			text-align: center;
+			padding-left: 30px;
+			padding-right: 30px;
+			cursor: pointer;
+			h3{
+				color: #fff;
+				font-size: 24px;
+				font-weight: 900;
+				line-height: 32px;
+				margin-bottom: 10px;
+			}
+			p{
+				color: #fff;
+				font-size: 14px;
+				line-height:24px;
+			}
+		}
+		&:hover{
+			.image-mask{
+				opacity: 1;
+			}
+			a:before{
+				opacity: 1;
+			}
+		}
+	}
+	&.with-padding{
+		padding: 15px;
+		li{
+			padding: 15px;
 		}
 	}
 }

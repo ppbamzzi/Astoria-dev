@@ -16,6 +16,7 @@ module.exports = function(grunt) {
           'less/modules/titles.less',
           'less/modules/big-slider.less',
           'less/modules/icon-boxes.less',
+          'less/modules/banners.less',
           'less/modules/lists.less',
           'less/modules/contacts.less',
           'less/modules/share.less',
@@ -41,7 +42,7 @@ module.exports = function(grunt) {
       dev: {
           bsFiles: {
               src : [
-                  'css/style.css',
+                  'css/*.css',
                   '*.html'
               ]
           },
