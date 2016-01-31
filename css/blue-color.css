@@ -8,8 +8,15 @@
 .blue-active-color header.header .header-right a:hover, 
 .blue-active-color header.header .header-right div.menu-icon:hover,
 .blue-active-color .btn-default.filled,
-.blue-active-color ul.with-images li .image-mask{
+.blue-active-color ul.with-images li .image-mask,
+.icon_box.filled,
+ul.big-titles li h5:before, 
+ul.big-titles li h6:before,
+.team-block .team-wrap:hover{
 	background-color: #17c4ee;
+}
+.icon_box.filled.filled-5{
+	background-color: #10b4db;
 }
 /*=====  End of Active Background Color  ======*/
 
@@ -20,7 +27,8 @@
 .blue-active-color .top-bar .top-bar-text i,
 .blue-active-color header.header .header-right a:hover, 
 .blue-active-color header.header .header-right div.menu-icon:hover,
-.blue-active-color .block-with-icon span b{
+.blue-active-color .block-with-icon span b,
+.team-block .team-wrap .share-icons ul li i:hover{
 	color: #17c4ee;
 }
 /*========  End of Active Font Color  ========*/

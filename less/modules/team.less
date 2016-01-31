@@ -1,0 +1,86 @@
+.team-block{
+	display: inline-block;
+	padding: 0 50px;
+	width: 50%;
+	float: left;
+	&:first-child{
+		padding-left: 0;
+	}
+	&:last-child{
+		padding-right: 0;
+	}
+	.team-inner{
+		position: relative;
+	}
+	.team-wrap{
+		position: absolute;
+		bottom: 50px;
+		right: 50px;
+		left: 50px;
+		height: 23%;
+		overflow: hidden;
+		background-color: #fff;
+		color: #3c3c3c;
+		padding: 3vw 2vw;
+		.transition();
+		h4{
+			color: #3c3c3c;
+			font-size: 22px;
+			line-height: 20px;
+			margin-bottom: 15px;
+			font-weight: 700;
+			transition: all 0.2s ease-in-out;
+		}
+		span{
+			font-size: 14px;
+			display: inline-block;
+			margin-bottom: 15px;
+			
+		}
+		p{
+			font-size: 14px;
+			line-height: 26px;
+			font-family: "Open Sans", sans-serif;
+			opacity: 0.8;
+			margin-bottom: 20px;
+			transition: opacity 0.2s ease-in-out;
+			opacity: 0;
+		}
+		.phone{
+			margin-bottom: 20px;
+			transition: opacity 0.2s ease-in-out;
+			opacity: 0;
+		}
+		.share-icons{
+			transition: opacity 0.2s ease-in-out;
+			opacity: 0;
+		}
+		.share-icons ul li i{
+			background-color: #fff;
+			color: #b8b8b8;
+			&:hover{
+				color: @active-color;
+			}
+		}
+	}
+	.team-wrap{
+		&:hover{
+			color: #fff;
+			background-color: @active-color;
+			
+			height: 50%;
+			h4{
+				color: #fff;
+			}
+			p,.phone,.share-icons{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width:1400px){
+	.team-block .team-wrap{
+		padding: 60px 40px;
+	}
+}
