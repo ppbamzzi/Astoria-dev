@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'office-icons';
+    src:    url('../fonts/office-icons/office-icons.eot?c470h2');
+    src:    url('../fonts/office-icons/office-icons.eot?c470h2#iefix') format('embedded-opentype'),
+        url('../fonts/office-icons/office-icons.ttf?c470h2') format('truetype'),
+        url('../fonts/office-icons/office-icons.woff?c470h2') format('woff'),
+        url('../fonts/office-icons/office-icons.svg?c470h2#office-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'office-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-office31:before {
+    content: "\e900";
+}
+.icon-office32:before {
+    content: "\e901";
+}
+.icon-office33:before {
+    content: "\e902";
+}
+.icon-office34:before {
+    content: "\e903";
+}
+.icon-office35:before {
+    content: "\e904";
+}
+.icon-office36:before {
+    content: "\e905";
+}
+.icon-office37:before {
+    content: "\e906";
+}
+.icon-office38:before {
+    content: "\e907";
+}
+.icon-office39:before {
+    content: "\e908";
+}
+.icon-office40:before {
+    content: "\e909";
+}
+.icon-office41:before {
+    content: "\e90a";
+}
+.icon-office42:before {
+    content: "\e90b";
+}
+.icon-office43:before {
+    content: "\e90c";
+}
+.icon-office44:before {
+    content: "\e90d";
+}
+.icon-office45:before {
+    content: "\e90e";
+}
+.icon-office1:before {
+    content: "\e90f";
+}
+.icon-office2:before {
+    content: "\e910";
+}
+.icon-office3:before {
+    content: "\e911";
+}
+.icon-office4:before {
+    content: "\e912";
+}
+.icon-office5:before {
+    content: "\e913";
+}
+.icon-office6:before {
+    content: "\e914";
+}
+.icon-office7:before {
+    content: "\e915";
+}
+.icon-office8:before {
+    content: "\e916";
+}
+.icon-office9:before {
+    content: "\e917";
+}
+.icon-office10:before {
+    content: "\e918";
+}
+.icon-office11:before {
+    content: "\e919";
+}
+.icon-office12:before {
+    content: "\e91a";
+}
+.icon-office13:before {
+    content: "\e91b";
+}
+.icon-office14:before {
+    content: "\e91c";
+}
+.icon-office15:before {
+    content: "\e91d";
+}
+.icon-office16:before {
+    content: "\e91e";
+}
+.icon-office17:before {
+    content: "\e91f";
+}
+.icon-office18:before {
+    content: "\e920";
+}
+.icon-office19:before {
+    content: "\e921";
+}
+.icon-office20:before {
+    content: "\e922";
+}
+.icon-office21:before {
+    content: "\e923";
+}
+.icon-office22:before {
+    content: "\e924";
+}
+.icon-office23:before {
+    content: "\e925";
+}
+.icon-office24:before {
+    content: "\e926";
+}
+.icon-office25:before {
+    content: "\e927";
+}
+.icon-office26:before {
+    content: "\e928";
+}
+.icon-office27:before {
+    content: "\e929";
+}
+.icon-office28:before {
+    content: "\e92a";
+}
+.icon-office29:before {
+    content: "\e92b";
+}
+.icon-office30:before {
+    content: "\e92c";
+}
+

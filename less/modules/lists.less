@@ -3,9 +3,11 @@
 		position: relative;
 		padding-left: 50px;
 	}
-	img{
+	[class^="icon-"]{
 		position: absolute;
 		left: 0;
+		font-size: 30px;
+		margin-right: 5px;
 	}
 	h5{
 		display: inline-block;
@@ -30,6 +32,67 @@ ul.with-images{
 		&:nth-child(2n+1){
 			clear: both;
 		}
+		>a{
+			position: relative;
+			display: block;
+			&:before{
+				content: "";
+				position: absolute;
+				opacity: 0;
+				.transition();
+				right: 0;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 1;
+				background-color: rgba(17,17,17,0.5);
+				cursor: pointer;
+			}
+		}
+		.image-mask{
+			position: absolute;
+			opacity: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.transition();
+			background-color: @active-color;
+			left: 3vw;
+			right: 3vw;
+			top: 3vw;
+			bottom: 3vw;
+			z-index: 2;
+			text-align: center;
+			padding-left: 30px;
+			padding-right: 30px;
+			cursor: pointer;
+			h3{
+				color: #fff;
+				font-size: 24px;
+				font-weight: 900;
+				line-height: 32px;
+				margin-bottom: 10px;
+			}
+			p{
+				color: #fff;
+				font-size: 14px;
+				line-height:24px;
+			}
+		}
+		&:hover{
+			.image-mask{
+				opacity: 1;
+			}
+			a:before{
+				opacity: 1;
+			}
+		}
+	}
+	&.with-padding{
+		padding: 15px;
+		li{
+			padding: 15px;
+		}
 	}
 }
 
@@ -45,10 +108,15 @@ ul.dotted{
 			height: 5px;
 			border-radius: 100%;
 			margin-right: 12px;
-			background-color: @active-color;
+			background-color: #fff;
 		}
 	}
 	margin-bottom: 40px;
+	&.active{
+		li:before{
+			background-color: @active-color;
+		}
+	}
 }
 
 ul.big-titles{
@@ -66,7 +134,7 @@ ul.big-titles{
 		&:nth-child(even){
 			padding-left: 20px;
 		}
-		h5{
+		h5,h6{
 			font-size: 18px;
 			font-weight: 700;
 			line-height: 26px;
@@ -84,6 +152,9 @@ ul.big-titles{
 				top: 50%;
 				margin-top: -2px;
 			}
+		}
+		h6{
+			font-size: 16px;
 		}
 	}
 }

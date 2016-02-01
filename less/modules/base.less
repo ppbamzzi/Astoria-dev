@@ -70,6 +70,9 @@ img{
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Raleway', sans-serif;
+	&.capitalize{
+		text-transform: capitalize !important;
+	}
 }
 p{
 	line-height: 1.8;
@@ -103,42 +106,11 @@ button{
 	height: auto;
 }
 
+b, strong{
+	font-weight: bold;
+}
+
 .active{
 	color: @active-color;
-}
-
-.mb70{
-	margin-bottom: 70px;
-}
-
-.mb50{
-	margin-bottom: 50px !important;
-}
-.mb40{
-	margin-bottom: 40px !important;
-}
-.pb-180{
-	padding-bottom: 7vw !important;
-}
-.pt-180{
-	padding-top: 7vw !important;
-}
-
-.no-padding{
-	padding: 0 !important;
-}
-
-.clear{
-	clear: both;
-}
-
-@media only screen and (max-width:480px){
-	.pb-180{
-		padding-bottom: 10vw !important;
-	}
-	.pt-180{
-		padding-top: 10vw !important;
-	}
-
 }
 /*=====  End of Base Styles  ======*/

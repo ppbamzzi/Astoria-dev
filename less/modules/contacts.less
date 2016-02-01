@@ -5,12 +5,11 @@
 }
 
 .contact-form{
-	background-color: @active-color;
+	
 	h4{
 		font-size: 26px;
 		font-weight: 800;
 		line-height: 32px;
-		color: #fff;
 		margin-bottom: 15px;
 	}
 	p{
@@ -51,6 +50,15 @@
 	input:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
 	textarea:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
 	textarea::-webkit-input-placeholder{color: rgba(255, 255, 255, 0.8);}
+	&.active-form{
+		background-color: @active-color;
+		h4{
+			color: #fff;
+		}
+		p{
+			color: rgba(255, 255, 255, 0.6);
+		}
+	}
 }
 
 section .contact-adress{
@@ -59,8 +67,8 @@ section .contact-adress{
 		li{
 			border-bottom: none;
 			margin-bottom: 50px;
-			img{
-				top: -5px;
+			span{
+				top: -8px;
 			}
 			strong{
 				text-transform: uppercase;

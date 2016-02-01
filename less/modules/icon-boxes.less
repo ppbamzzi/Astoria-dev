@@ -1,4 +1,4 @@
-.icon-box{
+.icon_box{
 	&.filled{
 		background-color: @active-color;
 		color:#fff;
@@ -6,6 +6,9 @@
 		.img-wrap{
 			height: 62px;
 			margin-bottom: 20px;
+		}
+		[class^="icon-"]{
+			font-size: 62px;
 		}
 		img{
 			
@@ -28,6 +31,23 @@
 		}
 		&.filled-10{
 			background-color: darken(@active-color, 10%);
+		}
+	}
+}
+
+.chess-icons{
+	&.flexbox-container{
+		flex-wrap: wrap;
+	}
+	.icon_box{
+		padding: 5vw;
+		h5{
+			font-size: 26px;
+		}
+		[class^="icon-"]{
+			font-size: 44px;
+			margin-bottom: 30px;
+			display: inline-block;
 		}
 	}
 }
@@ -78,7 +98,7 @@
 	}
 }
 
-.icon-box.numbered{
+.icon_box.numbered{
 	>span{
 		color: @active-color;
 		font-family: 'Open Sans', sans-serif;
@@ -143,7 +163,8 @@
 	}
 }
 
-.icon-box-bordered{
+.icon_box-bordered{
+	display: inline-block;
 	li{
 		width: 50%;
 		float: left;
@@ -162,13 +183,47 @@
 			line-height: 32px;
 			margin-bottom: 15px;
 		}
-		img{
+		span{
 			margin-right: 25px;
 			position: relative;
 			top:-35px;
 			float: left;
+			font-size: 40px;
+		}
+		&.color-white{
+			h5{
+				color: #fff;
+			}
+			border-color:rgba(255, 255, 255, 0.25);
 		}
 
+	}
+}
+
+#health{
+	.icon_box-bordered{
+		background-image: url(../assets/doctor-section.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+.block-with-icon{
+	margin-bottom: 40px;
+	img{
+		float: left;
+		margin-right: 20px;
+		margin-top: 10px;
+	}
+	span{
+		font-size: 16px;
+		line-height: 32px;
+		display: block;
+		b{
+			font-size: 28px;
+			font-weight: bold;
+			color: @active-color;
+		}
 	}
 }
 
@@ -179,20 +234,20 @@
 }
 
 @media only screen and (max-width:768px){
-	.icon-box.numbered{
+	.icon_box.numbered{
 		margin-bottom: 40px;
 	}
 }
 
 @media only screen and (max-width:480px){
-	.icon-box-bordered li{
+	.icon_box-bordered li{
 		height: auto !important;
 		padding: 30px;
 	}
 	.filled-box{
 		padding: 12vw 4vw;
 	}
-	.icon-box.filled{
+	.icon_box.filled{
 		padding: 40px 15px;
 	}
 }
