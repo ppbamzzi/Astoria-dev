@@ -12,7 +12,8 @@
 .icon_box.filled,
 ul.big-titles li h5:before, 
 ul.big-titles li h6:before,
-.team-block .team-wrap:hover{
+.team-block .team-wrap:hover,
+.active-bg{
 	background-color: #17c4ee;
 }
 .icon_box.filled.filled-5{

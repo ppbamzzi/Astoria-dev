@@ -164,6 +164,7 @@
 }
 
 .icon_box-bordered{
+	display: inline-block;
 	li{
 		width: 50%;
 		float: left;
@@ -189,7 +190,21 @@
 			float: left;
 			font-size: 40px;
 		}
+		&.color-white{
+			h5{
+				color: #fff;
+			}
+			border-color:rgba(255, 255, 255, 0.25);
+		}
 
+	}
+}
+
+#health{
+	.icon_box-bordered{
+		background-image: url(../assets/doctor-section.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 

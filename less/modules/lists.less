@@ -108,10 +108,15 @@ ul.dotted{
 			height: 5px;
 			border-radius: 100%;
 			margin-right: 12px;
-			background-color: @active-color;
+			background-color: #fff;
 		}
 	}
 	margin-bottom: 40px;
+	&.active{
+		li:before{
+			background-color: @active-color;
+		}
+	}
 }
 
 ul.big-titles{

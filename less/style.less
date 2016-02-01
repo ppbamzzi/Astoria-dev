@@ -1201,6 +1201,7 @@ header.header-type-2{
 }
 
 .icon_box-bordered{
+	display: inline-block;
 	li{
 		width: 50%;
 		float: left;
@@ -1226,7 +1227,21 @@ header.header-type-2{
 			float: left;
 			font-size: 40px;
 		}
+		&.color-white{
+			h5{
+				color: #fff;
+			}
+			border-color:rgba(255, 255, 255, 0.25);
+		}
 
+	}
+}
+
+#health{
+	.icon_box-bordered{
+		background-image: url(../assets/doctor-section.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 
@@ -1416,10 +1431,15 @@ ul.dotted{
 			height: 5px;
 			border-radius: 100%;
 			margin-right: 12px;
-			background-color: @active-color;
+			background-color: #fff;
 		}
 	}
 	margin-bottom: 40px;
+	&.active{
+		li:before{
+			background-color: @active-color;
+		}
+	}
 }
 
 ul.big-titles{
@@ -1615,12 +1635,11 @@ ul.big-titles{
 }
 
 .contact-form{
-	background-color: @active-color;
+	
 	h4{
 		font-size: 26px;
 		font-weight: 800;
 		line-height: 32px;
-		color: #fff;
 		margin-bottom: 15px;
 	}
 	p{
@@ -1661,6 +1680,15 @@ ul.big-titles{
 	input:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
 	textarea:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
 	textarea::-webkit-input-placeholder{color: rgba(255, 255, 255, 0.8);}
+	&.active-form{
+		background-color: @active-color;
+		h4{
+			color: #fff;
+		}
+		p{
+			color: rgba(255, 255, 255, 0.6);
+		}
+	}
 }
 
 section .contact-adress{

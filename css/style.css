@@ -1172,6 +1172,9 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   background-color: #d53e3e;
   background-image: url(../images/icon-chat.png);
 }
+.icon_box-bordered {
+  display: inline-block;
+}
 .icon_box-bordered li {
   width: 50%;
   float: left;
@@ -1197,6 +1200,17 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   top: -35px;
   float: left;
   font-size: 40px;
+}
+.icon_box-bordered li.color-white {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.icon_box-bordered li.color-white h5 {
+  color: #fff;
+}
+#health .icon_box-bordered {
+  background-image: url(../assets/doctor-section.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .block-with-icon {
   margin-bottom: 40px;
@@ -1378,6 +1392,9 @@ ul.dotted li:before {
   height: 5px;
   border-radius: 100%;
   margin-right: 12px;
+  background-color: #fff;
+}
+ul.dotted.active li:before {
   background-color: #f98f31;
 }
 ul.big-titles li {
@@ -1558,14 +1575,10 @@ ul.big-titles li h6 {
   padding-left: 100px;
   padding-right: 100px;
 }
-.contact-form {
-  background-color: #f98f31;
-}
 .contact-form h4 {
   font-size: 26px;
   font-weight: 800;
   line-height: 32px;
-  color: #fff;
   margin-bottom: 15px;
 }
 .contact-form p {
@@ -1614,6 +1627,15 @@ ul.big-titles li h6 {
 }
 .contact-form textarea::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
+}
+.contact-form.active-form {
+  background-color: #f98f31;
+}
+.contact-form.active-form h4 {
+  color: #fff;
+}
+.contact-form.active-form p {
+  color: rgba(255, 255, 255, 0.6);
 }
 section .contact-adress .list-with-icon {
   margin-bottom: 50px;
