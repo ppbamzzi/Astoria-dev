@@ -13,10 +13,17 @@
 ul.big-titles li h5:before, 
 ul.big-titles li h6:before,
 .team-block .team-wrap:hover,
-.active-bg{
+.active-bg,
+.contact-form button.active-color,
+.copyrights .share-icons li a i:hover,
+.owl-controls .owl-page.active,
+.preloader .ball{
 	background-color: #17c4ee;
 }
-.icon_box.filled.filled-5{
+.icon_box.filled.filled-5,
+.contact-form button.active-color:hover,
+.btn-default.filled:hover
+{
 	background-color: #10b4db;
 }
 /*=====  End of Active Background Color  ======*/
@@ -24,12 +31,17 @@ ul.big-titles li h6:before,
 /*===============================================
 =              Active Font Color               =
 ===============================================*/
+a:focus, a:hover,
+.active,
 .blue-active-color .top-bar .share-icons li i:hover,
 .blue-active-color .top-bar .top-bar-text i,
 .blue-active-color header.header .header-right a:hover, 
 .blue-active-color header.header .header-right div.menu-icon:hover,
 .blue-active-color .block-with-icon span b,
-.team-block .team-wrap .share-icons ul li i:hover{
+.team-block .team-wrap .share-icons ul li i:hover,
+.footer .post-widget li a:hover,
+.footer .footer-list li a:hover,
+.footer .twitter-widget li a.active{
 	color: #17c4ee;
 }
 /*========  End of Active Font Color  ========*/
@@ -37,8 +49,10 @@ ul.big-titles li h6:before,
 /*===========================================
 =            Active Border Color            =
 ===========================================*/
-.blue-active-color .btn-default.filled{
-	border-color: #17c4ee;
+.blue-active-color .btn-default.filled,
+.contact-form button,
+.owl-controls .owl-page.active{
+	border-color: #17c4ee !important;
 }
 
 

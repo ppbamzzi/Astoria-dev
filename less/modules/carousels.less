@@ -1,0 +1,49 @@
+#testimonial-slider{
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+.testimonial{
+	margin-bottom: 3vw;
+	.author{
+		margin-bottom: 40px;
+	}
+	p{
+		margin-bottom: 20px;
+		font-family: "Open Sans", sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+	i{
+		font-size: 20px;
+	}
+	.author-info{
+		padding-top: 20px;
+		b{
+			color: rgb(60, 60, 60);
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+}
+.owl-controls{
+	width: 100%;
+	text-align: center;
+	.owl-page{
+		width: 12px;
+		height: 12px;
+		opacity: 0.3;
+		border: 2px solid rgb(137, 137, 137);
+		margin-left: 4px;
+		margin-right: 4px;
+		background-color: transparent;
+		border-radius: 100%;
+		display: inline-block;
+		&.active{
+			background-color: @active-color;
+			border-color: @active-color;
+			opacity: 1;
+		}
+	}
+}
