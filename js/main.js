@@ -64,4 +64,9 @@ jQuery(document).ready(function() {
       }
   });
 
+$("#testimonial-slider").owlCarousel({
+  singleItem: true,
+  autoPlay : 3000
+});
+
 });	

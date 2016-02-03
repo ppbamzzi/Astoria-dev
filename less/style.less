@@ -67,6 +67,13 @@
     clear: both;
 }
 
+p.under-title-text{
+    color: rgb(95, 95, 95);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
 @media only screen and (max-width:480px){
     .pb-180{
         padding-bottom: 10vw !important;
@@ -329,10 +336,23 @@ section{
 		background-position: center center;
 		padding-bottom: 7vw;
 	}
+	&#hospital-history{
+		background-image: url(../assets/doctor-bg.jpg);
+		background-size: cover;
+		background-position: center center;
+		padding-bottom: 7vw;
+	}
 	.our-projects-bg{
 		background-image: url(../images/image-bg-project.jpg);
 		background-size: cover;
 	}
+	.doctor-testimonials{
+		background-image: url(../assets/doctor-testimonial.jpg);
+		background-size: cover;
+		padding-top: 12vw;
+		padding-bottom: 12vw;
+	}
+
 }
 
 @media only screen and (min-width:1400px){
@@ -1012,6 +1032,13 @@ header.header-type-2{
 	}
 }
 
+.slider-list{
+	li{
+		display: inline-block;
+		margin-right: 30px;
+	}
+}
+
 @media only screen and (max-width:992px){
 	.slider-mask{
 		.title-block h2{
@@ -1435,7 +1462,7 @@ ul.dotted{
 		}
 	}
 	margin-bottom: 40px;
-	&.active{
+	&.active-dotted{
 		li:before{
 			background-color: @active-color;
 		}
@@ -1635,12 +1662,11 @@ ul.big-titles{
 }
 
 .contact-form{
-	
-	h4{
-		font-size: 26px;
+	h2{
+		color: rgb(60, 60, 60);
+		font-size: 52px;
 		font-weight: 800;
-		line-height: 32px;
-		margin-bottom: 15px;
+		line-height: 50px;
 	}
 	p{
 		margin-bottom: 50px;
@@ -1650,11 +1676,11 @@ ul.big-titles{
 		margin-right: 0;
 		input,
 		textarea{
-			color: rgba(255, 255, 255, 0.8);
+			color: #898989;
 			font-size: 13px;
-			border:1px solid rgba(255, 255, 255, 0.5);
+			border: 1px solid rgba(51, 51, 51, 0.3);
 			&:focus{
-				border:1px solid rgba(255, 255, 255, 0.8);
+				border:1px solid rgba(51, 51, 51, 0.5);
 			}
 		}
 		textarea{
@@ -1663,34 +1689,63 @@ ul.big-titles{
 	}
 	button{
 		margin-top: 35px;
+		&.active-color{
+			background-color: @active-color;
+			&:hover{
+				color: #fff;
+			}
+		}
 	}
 	.one-half{
 		width: 50%;
 		display: inline-block;
 		float: left;
 		margin-bottom: 30px;
-		&:first-child{
+		&:nth-child(2n+1){
 			padding-right: 15px;
 		}
 		&:last-child{
 			padding-left: 15px;
 		}
 	}
-	input::-webkit-input-placeholder{color: rgba(255, 255, 255, 0.8);}
-	input:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
-	textarea:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
-	textarea::-webkit-input-placeholder{color: rgba(255, 255, 255, 0.8);}
+	input::-webkit-input-placeholder{color: rgba(137, 137, 137,0.8);}
+	input:-moz-input-placeholder{color: rgba(137, 137, 137,0.8);}
+	textarea:-moz-input-placeholder{color: rgba(137, 137, 137,0.8);}
+	textarea::-webkit-input-placeholder{color: rgba(137, 137, 137,0.8);}
 	&.active-form{
 		background-color: @active-color;
 		h4{
 			color: #fff;
+			font-size: 26px;
+			font-weight: 800;
+			line-height: 32px;
+			margin-bottom: 15px;
 		}
 		p{
 			color: rgba(255, 255, 255, 0.6);
 		}
+		.form-group{
+			input,
+			textarea{
+				color: rgba(255, 255, 255, 0.8);
+				font-size: 13px;
+				border:1px solid rgba(255, 255, 255, 0.5);
+				&:focus{
+					border:1px solid rgba(255, 255, 255, 0.8);
+				}
+			}
+		}
+		input::-webkit-input-placeholder{color: rgba(255, 255, 255, 0.8);}
+		input:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
+		textarea:-moz-input-placeholder{color: rgba(255, 255, 255, 0.8);}
+		textarea::-webkit-input-placeholder{color: rgba(255, 255, 255, 0.8);}
 	}
 }
-
+.contact-map{
+	background-image: url(../assets/map-doctor.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 section .contact-adress{
 	.list-with-icon{
 		margin-bottom: 50px;
@@ -1835,6 +1890,112 @@ section .contact-adress{
 @media only screen and (max-width:1200px){
 	.skills .text{
 		padding-right: 10px;
+	}
+}
+.blog-post{
+	.post-image{
+		margin-bottom: 10px;
+		display: block;
+	}
+	.meta-post{
+		font-size: 13px;
+		line-height: 32px;
+		color: rgb(137, 137, 137);
+		a{
+			color: rgb(60, 60, 60);
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		.date{
+			color: rgb(60, 60, 60); 
+		}
+	}
+	.post-title{
+		color: #4a4a4a;
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 10px;
+		line-height: 32px;
+	}
+	.entry-content{
+		color: rgb(137, 137, 137);
+		font-size: 14px;
+		line-height: 26px;
+	}
+	.btn-default{
+		margin-top: 30px;
+		display: table;
+	}
+}
+
+.smaller-posts{
+	li{
+		width: 50%;
+		float: left;
+		margin-bottom: 50px;
+		&:nth-child(odd){
+			padding-right: 15px;
+		}
+		&:nth-child(even){
+			padding-left: 15px;
+		}
+		.meta-post{
+			line-height: 20px;
+		}
+		.post-title{
+			font-size: 14px;
+			line-height: 26px;
+		}
+	}
+}
+#testimonial-slider{
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+.testimonial{
+	margin-bottom: 3vw;
+	.author{
+		margin-bottom: 40px;
+	}
+	p{
+		margin-bottom: 20px;
+		font-family: "Open Sans", sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+	}
+	i{
+		font-size: 20px;
+	}
+	.author-info{
+		padding-top: 20px;
+		b{
+			color: rgb(60, 60, 60);
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+}
+.owl-controls{
+	width: 100%;
+	text-align: center;
+	.owl-page{
+		width: 12px;
+		height: 12px;
+		opacity: 0.3;
+		border: 2px solid rgb(137, 137, 137);
+		margin-left: 4px;
+		margin-right: 4px;
+		background-color: transparent;
+		border-radius: 100%;
+		display: inline-block;
+		&.active{
+			background-color: @active-color;
+			border-color: @active-color;
+			opacity: 1;
+		}
 	}
 }
 .footer{
@@ -2058,49 +2219,49 @@ section .contact-adress{
 }
   
 .ball:nth-child(1) {
-	background: @active-color;
+	background-color: @active-color;
 	-webkit-animation: right 1s infinite ease-in-out;
 	-moz-animation: right 1s infinite ease-in-out;
 	animation: right 1s infinite ease-in-out;    
 }
 
 .ball:nth-child(2) {
-	background: @active-color;
+	background-color: @active-color;
 	-webkit-animation: left 1.1s infinite ease-in-out;
 	-moz-animation: left 1.1s infinite ease-in-out;
 	animation: left 1.1s infinite ease-in-out;
 }
 
 .ball:nth-child(3) {
-	background: @active-color;
+	background-color: @active-color;
 	-webkit-animation: right 1.05s infinite ease-in-out;
 	-moz-animation: right 1.05s infinite ease-in-out;
 	animation: right 1.05s infinite ease-in-out;
 }
 
 .ball:nth-child(4) {
-	background: @active-color;
+	background-color: @active-color;
 	-webkit-animation: left 1.15s infinite ease-in-out;
 	-moz-animation: left 1.15s infinite ease-in-out;
 	animation: left 1.15s infinite ease-in-out;
  }
 
 .ball:nth-child(5) {
-	background: @active-color;  
+	background-color: @active-color;  
 	-webkit-animation: right 1.1s infinite ease-in-out;
 	-moz-animation: right 1.1s infinite ease-in-out;
 	animation: right 1.1s infinite ease-in-out;
 }
 
 .ball:nth-child(6) {
-	background: @active-color;  
+	background-color: @active-color;  
 	-webkit-animation: left 1.05s infinite ease-in-out;
 	-moz-animation: left 1.05s infinite ease-in-out;
 	animation: left 1.05s infinite ease-in-out;
 }
 
 .ball:nth-child(7) {
-	background: @active-color;  
+	background-color: @active-color;  
 	-webkit-animation: right 1s infinite ease-in-out;
 	-moz-animation: right 1s infinite ease-in-out;
 	animation: right 1s infinite ease-in-out;
