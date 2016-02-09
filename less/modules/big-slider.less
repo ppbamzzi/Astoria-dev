@@ -62,3 +62,24 @@
 .tparrows{
 	position: relative;
 }
+.tp-bullet{
+	background-color: transparent !important;
+	.tp-bullet-astoria{
+		width: 13px;
+		height: 13px;
+		border: 2px solid #dfdfdf;
+		border-radius: 100%;
+		display: inline-block;
+	}
+	&.selected{
+		.tp-bullet-astoria{
+			border-color: @active-color;
+			background-color: @active-color;
+		}
+	}
+	&:hover{
+		.tp-bullet-astoria{
+			border-color: @active-color;
+		}
+	}
+}

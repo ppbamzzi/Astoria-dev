@@ -389,7 +389,7 @@ section.dark-section p {
   line-height: 26px;
 }
 section .f-column {
-  padding: 3.3vw;
+  padding: 4.2vw 5.1vw;
 }
 section .f-column p {
   margin-bottom: 45px;
@@ -948,7 +948,7 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 .title-block {
   display: inline-block;
   width: 100%;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 .title-block h4 {
   color: #4a4a4a;
@@ -1098,6 +1098,23 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 .tparrows {
   position: relative;
 }
+.tp-bullet {
+  background-color: transparent !important;
+}
+.tp-bullet .tp-bullet-astoria {
+  width: 13px;
+  height: 13px;
+  border: 2px solid #dfdfdf;
+  border-radius: 100%;
+  display: inline-block;
+}
+.tp-bullet.selected .tp-bullet-astoria {
+  border-color: #f98f31;
+  background-color: #f98f31;
+}
+.tp-bullet:hover .tp-bullet-astoria {
+  border-color: #f98f31;
+}
 .icon_box.filled {
   background-color: #f98f31;
   color: #fff;
@@ -1147,42 +1164,40 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   display: inline-block;
 }
 .bordered-mask {
-  position: absolute;
-  left: 5vw;
-  right: 5vw;
-  top: 4.3vw;
-  bottom: 4.3vw;
+  width: 100%;
+  height: 100%;
   border: 15px solid #fff;
 }
 .bordered-mask .bordered-mask-wrap {
-  position: absolute;
-  top: 50%;
-  padding: 2vw;
-  transform: translateY(-50%);
+  position: relative;
+  padding: 110px 40px;
   text-align: center;
   color: #fff;
-  width: 100%;
+  width: 370px;
 }
 .bordered-mask .bordered-mask-wrap span {
   font-family: 'Open Sans', sans-serif;
   font-size: 102px;
-  font-weight: 700;
+  line-height: 80px;
+  font-weight: 800;
   margin-bottom: 25px;
   display: inline-block;
   text-transform: uppercase;
 }
 .bordered-mask .bordered-mask-wrap h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 24px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .bordered-mask .bordered-mask-wrap p {
   color: rgba(255, 255, 255, 0.8);
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: 400;
+  letter-spacing: 0.5px;
   line-height: 20px;
 }
 .icon_box.numbered > span {
@@ -1197,8 +1212,9 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 .icon_box.numbered h5 {
   color: #4a4a4a;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 32px;
+  letter-spacing: 0.5px;
   margin-bottom: 20px;
 }
 .filled-box {
@@ -1363,7 +1379,6 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 }
 .list-with-icon li {
   position: relative;
-  padding-left: 50px;
 }
 .list-with-icon [class^="icon-"] {
   position: absolute;
@@ -1376,9 +1391,11 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   font-size: 18px;
   font-weight: 700;
   line-height: 28px;
+  padding-left: 50px;
 }
 .list-with-icon p {
   margin-top: 15px;
+  margin-bottom: 25px !important;
 }
 ul.with-images li {
   width: 50%;
