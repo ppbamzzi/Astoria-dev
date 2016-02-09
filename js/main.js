@@ -69,4 +69,8 @@ $("#testimonial-slider").owlCarousel({
   autoPlay : 3000
 });
 
+$(".a_carousel").owlCarousel({
+  singleItem: true
+});
+
 });	

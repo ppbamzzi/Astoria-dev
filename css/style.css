@@ -37,10 +37,10 @@
   margin-bottom: 40px !important;
 }
 .pb-180 {
-  padding-bottom: 7vw !important;
+  padding-bottom: 9.4vw !important;
 }
 .pt-180 {
-  padding-top: 7vw !important;
+  padding-top: 9.4vw !important;
 }
 .no-padding {
   padding: 0 !important;
@@ -298,16 +298,48 @@ strong {
   font-size: 13px;
   padding: 15px 50px;
   font-weight: 700;
+  z-index: 1;
   letter-spacing: 1px;
   background-color: transparent;
   border-radius: 0;
+  position: relative;
   text-transform: uppercase;
   border: 1px solid rgba(255, 255, 255, 0.6);
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.4s, linear;
+  transition: all 0.4s, linear;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.btn-default:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f98f31;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transform: scale3d(0.7, 1, 1);
+  transform: scale3d(0.7, 1, 1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 .btn-default:hover {
-  background-color: #fff;
-  border-color: #fff;
+  background-color: transparent;
+  color: #fff;
+  border-color: #f98f31;
+}
+.btn-default:hover:before {
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .btn-default.filled {
   background-color: #f98f31;
@@ -318,8 +350,11 @@ strong {
   background-color: #f07507;
   border-color: #f07507;
 }
+.btn-default.filled:before {
+  display: none;
+}
 section {
-  padding-top: 7vw;
+  padding-top: 9.4vw;
   display: inline-block;
   width: 100%;
   float: left;
@@ -350,11 +385,14 @@ section.dark-section .list-with-icon li:last-child {
 section.dark-section .list-with-icon li:last-child p {
   margin-bottom: 0;
 }
+section.dark-section p {
+  line-height: 26px;
+}
 section .f-column {
   padding: 3.3vw;
 }
 section .f-column p {
-  margin-bottom: 25px;
+  margin-bottom: 45px;
 }
 section .chees-block {
   padding: 0;
@@ -384,6 +422,9 @@ section .chees-block .list-with-icon li {
 section .chees-block .list-with-icon li [class^="icon-"] {
   top: -9px;
 }
+section#offer .icon_box {
+  margin-top: 30px;
+}
 section#most-interesting {
   background-image: url(../images/image-interesting.jpg);
   background-size: cover;
@@ -405,6 +446,9 @@ section .doctor-testimonials {
   background-size: cover;
   padding-top: 12vw;
   padding-bottom: 12vw;
+}
+section#about-us {
+  min-height: 34vw;
 }
 @media only screen and (min-width: 1400px) {
   .block-right-align {
@@ -911,7 +955,7 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -921,8 +965,9 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   font-size: 52px;
   font-weight: 800;
   line-height: 50px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 .title-block hr.separator {
   background-image: url(../images/separator.svg);
@@ -931,7 +976,7 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   height: 15px;
   display: inline-block;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .title-block p {
   color: #5f5f5f;
@@ -966,13 +1011,14 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   font-size: 14px;
   font-weight: 700;
   line-height: 28px;
-  margin-bottom: 10px;
-  letter-spacing: 5px;
+  margin-bottom: 15px;
+  letter-spacing: 6px;
   text-transform: uppercase;
 }
 .medium-title-block h3 {
   font-size: 34px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.5px;
   line-height: 34px;
   text-transform: uppercase;
 }
@@ -1007,18 +1053,25 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 .slider-mask .title-block h4 {
   color: #fff;
   font-size: 14px;
+  margin-bottom: 25px;
+  letter-spacing: 6px;
 }
 .slider-mask .title-block h2 {
   font-size: 66px;
+  letter-spacing: 0.5px;
   color: #fff;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
+}
+.slider-mask .title-block .separator {
+  margin-bottom: 30px;
 }
 .slider-mask .title-block p {
   color: #fff;
   opacity: 0.8;
   font-size: 18px;
   line-height: 30px;
-  margin-bottom: 35px;
+  letter-spacing: 0.3px;
+  margin-bottom: 44px;
 }
 .slider-list li {
   display: inline-block;
@@ -1042,14 +1095,17 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
     padding: 0 15px;
   }
 }
+.tparrows {
+  position: relative;
+}
 .icon_box.filled {
   background-color: #f98f31;
   color: #fff;
-  padding: 3.2vw;
+  padding: 4.15vw;
 }
 .icon_box.filled .img-wrap {
   height: 62px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .icon_box.filled [class^="icon-"] {
   font-size: 62px;
@@ -1060,13 +1116,14 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 }
 .icon_box.filled h5 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.5px;
   line-height: 30px;
   margin-bottom: 20px;
 }
 .icon_box.filled p {
   color: rgba(255, 255, 255, 0.8);
-  line-height: 32px;
+  line-height: 26px;
   font-size: 14px;
 }
 .icon_box.filled.filled-5 {
@@ -1088,11 +1145,6 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   font-size: 44px;
   margin-bottom: 30px;
   display: inline-block;
-}
-.bordered-banner {
-  background-image: url(../images/image-bg.jpg);
-  background-size: cover;
-  background-position: center center;
 }
 .bordered-mask {
   position: absolute;
@@ -1922,6 +1974,10 @@ section .contact-adress .list-with-icon li strong {
   background-color: #f98f31;
   border-color: #f98f31;
   opacity: 1;
+}
+.a_carousel {
+  position: relative;
+  height: 100%;
 }
 .footer {
   display: inline-block;
