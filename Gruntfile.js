@@ -22,6 +22,8 @@ module.exports = function(grunt) {
           'less/modules/contacts.less',
           'less/modules/share.less',
           'less/modules/progress-bar.less',
+          'less/modules/blog-posts.less',
+          'less/modules/carousels.less',
           'less/modules/footer.less',
           'less/modules/animations.less'
         ],

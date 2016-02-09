@@ -1,7 +1,6 @@
 .list-with-icon{
 	li{
 		position: relative;
-		padding-left: 50px;
 	}
 	[class^="icon-"]{
 		position: absolute;
@@ -14,9 +13,11 @@
 		font-size: 18px;
 		font-weight: 700;
 		line-height: 28px;
+		padding-left: 50px;
 	}
 	p{
 		margin-top: 15px;
+		margin-bottom: 25px !important;
 	}
 }
 
@@ -112,7 +113,7 @@ ul.dotted{
 		}
 	}
 	margin-bottom: 40px;
-	&.active{
+	&.active-dotted{
 		li:before{
 			background-color: @active-color;
 		}

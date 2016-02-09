@@ -19,11 +19,50 @@ jQuery(document).ready(function() {
       sliderLayout:"fullscreen",
       delay:8000,
       navigation: {
-          arrows:{enable:true}				
+          arrows:{enable:true},
+          keyboardNavigation:"on", 
+          mouseScrollNavigation:"off",
+          onHoverStop:"on",
+          touch:{
+          touchenabled:"on",
+            swipe_treshold : 75,
+            swipe_min_touches : 1,
+            drag_block_vertical:false,
+            swipe_direction:"horizontal"
+          }				
       },			
       gridwidth:1230,
       gridheight:720		
-    });		
+    });
+
+  jQuery("#slider-carousel").revolution({
+    sliderType:"carousel",
+    autoHeight:"on",        
+    minHeight: 680,
+    navigation : {
+      keyboardNavigation:"off", 
+      mouseScrollNavigation:"off",
+      touch:{
+      touchenabled:"off",
+        swipe_treshold : 75,
+        swipe_min_touches : 1,
+        drag_block_vertical:false,
+        swipe_direction:"horizontal"
+      },
+      bullets:{
+        enable:true,
+        style:"",
+        direction:"horizontal",
+        h_align:"center",
+        v_align:"bottom",
+        space:10,
+        h_offset:0,
+        v_offset:50,
+        tmp:'<span class="tp-bullet-astoria"></span>'
+      }
+    } 
+  }); 
+
 
   $('.video-popup').magnificPopup({
     removalDelay: 500,
@@ -63,5 +102,14 @@ jQuery(document).ready(function() {
       return window.pageYOffset || document.documentElement.scrollTop;
       }
   });
+
+$("#testimonial-slider").owlCarousel({
+  singleItem: true,
+  autoPlay : 3000
+});
+
+$(".a_carousel").owlCarousel({
+  singleItem: true
+});
 
 });	
