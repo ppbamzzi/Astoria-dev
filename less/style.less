@@ -260,7 +260,7 @@ b, strong{
 	    left: 0;
 	    width: 100%;
 	    height: 100%;
-	    background: @active-color;
+	    background: #fff;
 	    z-index: -1;
 	    opacity: 0;
 	    -webkit-transform: scale3d(0.7, 1, 1);
@@ -272,8 +272,8 @@ b, strong{
     }
 	&:hover{
 		background-color: transparent;
-		color: #fff;
-		border-color: @active-color;
+		color: rgb(41, 41, 41);
+		border-color: #fff;
 		&:before{
 			-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
 			transition: transform 0.4s, opacity 0.4s;
@@ -305,9 +305,10 @@ section{
 	&.full-width{
 		h6{
 			font-size: 18px;
-			font-weight: 700;
+			font-weight: 800;
+			letter-spacing: 0.5px;
 			line-height: 40px;
-			margin-bottom: 5px;
+			margin-bottom: 10px;
 		}
 	}
 	&.dark-section{
@@ -330,9 +331,6 @@ section{
 				}
 			}
 		}
-		p{
-			line-height: 26px;
-		}
 	}
 	.f-column{
 		padding: 4.2vw 5.1vw;
@@ -347,25 +345,45 @@ section{
 			color: #4a4a4a;
 			font-size: 30px;
 			font-weight: 800;
+			letter-spacing: 0.5px;
 			line-height: 32px;
-			margin-bottom: 20px;
+			margin-bottom: 25px;
 		}
 		p{
 			line-height: 26px;
-			margin-bottom: 50px;
+			margin-bottom: 55px;
 		}
 		.list-with-icon{
 			width: 50%;
 			display: inline-block;
 			float: left;
 			vertical-align: top;
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 			li{
 				margin-bottom: 45px;
+				padding-left: 55px;
 				[class^="icon-"]{
 					top: -9px;
+					min-width: 42px;
+					text-align: center;
 				}
 			}
+		}
+	}
+	&.fixed-bg{
+		background-attachment: fixed;
+		.title-block{
+			h2{
+				margin-bottom: 25px;
+			}
+			.separator{
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&#services{
+		.title-block{
+			margin-bottom: 80px;
 		}
 	}
 	&#offer{
@@ -388,6 +406,14 @@ section{
 	.our-projects-bg{
 		background-image: url(../images/image-bg-project.jpg);
 		background-size: cover;
+		.title-block{
+			h2{
+				margin-bottom: 25px;
+			}
+			.separator{
+				margin-bottom: 20px;
+			}
+		}
 	}
 	.doctor-testimonials{
 		background-image: url(../assets/doctor-testimonial.jpg);
@@ -404,13 +430,13 @@ section{
 @media only screen and (min-width:1400px){
 	.block-right-align{
 		float: right;
-		width: 85%;
-		padding-right: 75px;
+		width: 73%;
+		padding-right: 80px;
 	}
 	.block-left-align{
 		float: left;
-		width: 85%;
-		padding-left: 75px;
+		width: 73%;
+		padding-left: 80px;
 	}
 }
 
@@ -998,9 +1024,15 @@ header.header-type-2{
 	}
 }
 .title-on-dark{
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 	h4,h3,h2{
 		color: #fff;
+	}
+	h2{
+		margin-bottom: 25px;
+	}
+	hr.separator{
+		margin-bottom: 20px;
 	}
 	p{
 		color: rgba(255, 255, 255, 0.8);
@@ -1259,7 +1291,7 @@ header.header-type-2{
 }
 
 .filled-box{
-	padding: 4vw 2vw;
+	padding: 5vw 2vw;
 	background-position: right bottom;
 	background-repeat: no-repeat;
 	.separator{
@@ -1269,14 +1301,15 @@ header.header-type-2{
 		height: 15px;
 		display: inline-block;
 		margin-top: 0;
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 	}
 	h5{
 		color: #fff;
 		font-size: 22px;
-		font-weight: 700;
+		font-weight: 800;
+		letter-spacing: 0.5px;
 		line-height: 20px;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 	p{
 		opacity: 0.8;
@@ -1284,7 +1317,7 @@ header.header-type-2{
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 26px;
-		margin-bottom: 30px;
+		margin-bottom: 45px;
 	}
 	&.orange{
 		background-color: #f98f31;
@@ -1309,8 +1342,7 @@ header.header-type-2{
 	li{
 		width: 50%;
 		float: left;
-		padding: 0 50px;
-		height: 315px;
+		padding: 5vw 2.5vw;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -1320,7 +1352,8 @@ header.header-type-2{
 		h5{
 			color: #4a4a4a;
 			font-size: 18px;
-			font-weight: 700;
+			font-weight: 800;
+			letter-spacing: 0.5px;
 			line-height: 32px;
 			margin-bottom: 15px;
 		}
@@ -1564,8 +1597,9 @@ ul.big-titles{
 		}
 		h5,h6{
 			font-size: 18px;
-			font-weight: 700;
+			font-weight: 800;
 			line-height: 26px;
+			letter-spacing: 0.5px;
 			color: #4a4a4a;
 			margin-bottom: 15px;
 			position: relative;
@@ -1797,10 +1831,11 @@ ul.big-titles{
 			font-size: 26px;
 			font-weight: 800;
 			line-height: 32px;
-			margin-bottom: 15px;
+			margin-bottom: 20px;
 		}
 		p{
 			color: rgba(255, 255, 255, 0.6);
+			margin-bottom: 60px;
 		}
 		.form-group{
 			input,
@@ -1808,6 +1843,8 @@ ul.big-titles{
 				color: rgba(255, 255, 255, 0.8);
 				font-size: 13px;
 				border:1px solid rgba(255, 255, 255, 0.5);
+				padding-left: 20px;
+				padding-right: 20px;
 				&:focus{
 					border:1px solid rgba(255, 255, 255, 0.8);
 				}
@@ -1826,10 +1863,12 @@ ul.big-titles{
 }
 section .contact-adress{
 	.list-with-icon{
-		margin-bottom: 50px;
+		margin-bottom: 60px;
+		margin-top: 20px;
 		li{
 			border-bottom: none;
-			margin-bottom: 50px;
+			margin-bottom: 40px;
+			padding-left: 50px;
 			span{
 				top: -8px;
 			}
@@ -1846,9 +1885,10 @@ section .contact-adress{
 	h3 a{
 		color: rgba(255, 255, 255, 1);
 		font-size: 30px;
-		font-weight: 700;
+		font-weight: 800;
 		line-height: 32px;
-		padding: 70px 0;
+		letter-spacing: 0.5px;
+		padding: 80px 0;
 		display: inline-block;
 		width: 100%;
 		text-align: center;
@@ -2106,7 +2146,7 @@ section .contact-adress{
 	}
 	.post-widget{
 		li{
-			margin-bottom: 20px;
+			margin-bottom: 25px;
 			a{
 				color: #acacac;
 				font-size: 13px;
@@ -2230,7 +2270,7 @@ section .contact-adress{
 		font-weight: 700;
 		line-height: 20px;
 		color: #fff;
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 	}
 }
 .copyrights{

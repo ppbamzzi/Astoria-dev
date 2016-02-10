@@ -6,9 +6,10 @@ section{
 	&.full-width{
 		h6{
 			font-size: 18px;
-			font-weight: 700;
+			font-weight: 800;
+			letter-spacing: 0.5px;
 			line-height: 40px;
-			margin-bottom: 5px;
+			margin-bottom: 10px;
 		}
 	}
 	&.dark-section{
@@ -31,9 +32,6 @@ section{
 				}
 			}
 		}
-		p{
-			line-height: 26px;
-		}
 	}
 	.f-column{
 		padding: 4.2vw 5.1vw;
@@ -48,25 +46,45 @@ section{
 			color: #4a4a4a;
 			font-size: 30px;
 			font-weight: 800;
+			letter-spacing: 0.5px;
 			line-height: 32px;
-			margin-bottom: 20px;
+			margin-bottom: 25px;
 		}
 		p{
 			line-height: 26px;
-			margin-bottom: 50px;
+			margin-bottom: 55px;
 		}
 		.list-with-icon{
 			width: 50%;
 			display: inline-block;
 			float: left;
 			vertical-align: top;
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 			li{
 				margin-bottom: 45px;
+				padding-left: 55px;
 				[class^="icon-"]{
 					top: -9px;
+					min-width: 42px;
+					text-align: center;
 				}
 			}
+		}
+	}
+	&.fixed-bg{
+		background-attachment: fixed;
+		.title-block{
+			h2{
+				margin-bottom: 25px;
+			}
+			.separator{
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&#services{
+		.title-block{
+			margin-bottom: 80px;
 		}
 	}
 	&#offer{
@@ -89,6 +107,14 @@ section{
 	.our-projects-bg{
 		background-image: url(../images/image-bg-project.jpg);
 		background-size: cover;
+		.title-block{
+			h2{
+				margin-bottom: 25px;
+			}
+			.separator{
+				margin-bottom: 20px;
+			}
+		}
 	}
 	.doctor-testimonials{
 		background-image: url(../assets/doctor-testimonial.jpg);
@@ -105,13 +131,13 @@ section{
 @media only screen and (min-width:1400px){
 	.block-right-align{
 		float: right;
-		width: 85%;
-		padding-right: 75px;
+		width: 73%;
+		padding-right: 80px;
 	}
 	.block-left-align{
 		float: left;
-		width: 85%;
-		padding-left: 75px;
+		width: 73%;
+		padding-left: 80px;
 	}
 }
 
