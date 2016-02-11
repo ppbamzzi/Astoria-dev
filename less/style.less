@@ -424,6 +424,10 @@ section{
 	&#about-us{
 		min-height: 34vw;
 	}
+	&#moved-banners{
+		padding-left: 7vw;
+		padding-right: 7vw;
+	}
 
 }
 
@@ -882,10 +886,11 @@ header.header-type-2{
 	}
 	.inner-menu{
 		padding-top: 14vh;
-		padding-bottom: 14vh;
+		padding-bottom: 13vh;
 		li{
 			a{
 				padding: 1.5vh 0;
+				letter-spacing: 1px;
 				font-size: 18px;
 				display: inline-block;
 				&:hover{
@@ -899,7 +904,7 @@ header.header-type-2{
 		input[type="search"]{
 			width: 100%;
 			height: 40px;
-			font-size: 11px;
+			font-size: 13px;
 			line-height: 20px;
 			padding-left: 20px;
 			padding-right: 30px;
@@ -917,7 +922,7 @@ header.header-type-2{
 		}
 	}
 	.share-icons{
-		margin-top: 4vh;
+		margin-top: 5vh;
 		li{
 			margin-left: 2px;
 			margin-right: 2px;
@@ -1210,6 +1215,19 @@ header.header-type-2{
 		}
 		&.filled-10{
 			background-color: darken(@active-color, 10%);
+		}
+		&.icon_on_left{
+			.img-wrap{
+				display: table;
+				float: left;
+				margin-right: 38px;
+			}
+			.icon_content{
+				display: table;
+			}
+			h5{
+				font-size: 22px;
+			}
 		}
 	}
 }
@@ -1581,6 +1599,8 @@ ul.dotted{
 }
 
 ul.big-titles{
+	display: inline-block;
+	width: 100%;
 	li{
 		width: 50%;
 		display: inline-block;
@@ -1888,7 +1908,7 @@ section .contact-adress{
 		font-weight: 800;
 		line-height: 32px;
 		letter-spacing: 0.5px;
-		padding: 80px 0;
+		padding: 80px 30px;
 		display: inline-block;
 		width: 100%;
 		text-align: center;
@@ -1903,6 +1923,10 @@ section .contact-adress{
 @media only screen and (max-width:1024px){
 	.contact-form h4{
 		font-size: 22px;
+	}
+	.contact-adress, .contact-form{
+		padding-right: 50px;
+		padding-left: 50px;
 	}
 }
 
