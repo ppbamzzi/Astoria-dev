@@ -337,6 +337,15 @@ section{
 		p{
 			margin-bottom: 45px;
 		}
+		&.after-images{
+			padding-left: 3.5vw;
+			padding-right: 13vw;
+		}
+		&.active-bg{
+			p{
+				opacity: 0.8;
+			}
+		}
 	}
 	.chees-block{
 		padding: 0;
@@ -418,8 +427,8 @@ section{
 	.doctor-testimonials{
 		background-image: url(../assets/doctor-testimonial.jpg);
 		background-size: cover;
-		padding-top: 12vw;
-		padding-bottom: 12vw;
+		padding-top: 15vw;
+		padding-bottom: 15vw;
 	}
 	&#about-us{
 		min-height: 34vw;
@@ -1128,6 +1137,18 @@ header.header-type-2{
 	li{
 		display: inline-block;
 		margin-right: 30px;
+		span{
+			width: 60px;
+			height: 60px;
+			background-color: rgb(23, 196, 238);
+			border-radius: 4px 5px 5px 4px;
+			color: #fff;
+			font-size:32px;
+			line-height: 35px;
+			padding:12px;
+			text-align: center;
+			display: inline-block;
+		}
 	}
 }
 
@@ -1240,6 +1261,7 @@ header.header-type-2{
 		padding: 5vw;
 		h5{
 			font-size: 26px;
+			font-weight:700;
 		}
 		[class^="icon-"]{
 			font-size: 44px;
@@ -1252,7 +1274,6 @@ header.header-type-2{
 .bordered-mask{
 	width: 100%;
 	height: 100%;
-
 	border:15px solid #fff;
 	.bordered-mask-wrap{
 		position: relative;
@@ -1378,7 +1399,7 @@ header.header-type-2{
 		span{
 			margin-right: 25px;
 			position: relative;
-			top:-35px;
+			top:-20px;
 			float: left;
 			font-size: 40px;
 		}
@@ -1417,6 +1438,15 @@ header.header-type-2{
 			color: @active-color;
 		}
 	}
+	&.doctor-block{
+		>span{
+			font-size:44px;
+			margin-right: 20px;
+			display: table;
+			float: left;
+			line-height: 75px;
+		}
+	}
 }
 
 @media only screen and (max-width:1399px){
@@ -1445,34 +1475,56 @@ header.header-type-2{
 }
 .banner{
 	position: relative;
-	margin:30px 15px;
+	margin:30px 15px 0;
 	.banner-wrap{
 		position: absolute;
 		bottom: 0;
 		width: 100%;
 		padding: 2.5vw;
+		left: 0;
+		z-index: 1;
+		.transition();
 		h5,h3,p{
 			color: #fff;
 		}
 		h5{
 			font-size: 14px;
 			text-transform: uppercase;
-			font-weight: 500;
+			font-weight: 700;
 			line-height: 28px;
-			letter-spacing: 5px;
-			margin-bottom: 10px;
+			letter-spacing: 6px;
+			margin-bottom: 20px;
 		}
 		h3{
 			font-size: 30px;
 			line-height: 24px;
 			text-transform: capitalize;
-			font-weight: 600;
-			letter-spacing: 1px;
-			margin-bottom: 20px;
+			font-weight: 800;
+			letter-spacing: 0.5px;
+			margin-bottom: 30px;
 		}
 		p{
 			font-family: "Open Sans", sans-serif;
 			opacity: 0.8;
+		}
+	}
+	.img-wrap{
+		background-color: #000;
+		backface-visibility: hidden;
+		img{
+			display: block;
+			.transition();
+			backface-visibility: hidden;
+		}
+	}
+	&:hover{
+		.banner-wrap{
+			bottom:5vh;
+		}
+		.img-wrap{
+			img{
+				opacity:0.75;
+			}
 		}
 	}
 }
@@ -1576,6 +1628,12 @@ ul.with-images{
 }
 
 ul.dotted{
+	h5{
+		font-weight:800;
+		letter-spacing:0.5px;
+		font-size:18px;
+		margin-bottom: 10px;
+	}
 	li{
 		line-height: 32px;
 		&:before{
@@ -1704,8 +1762,6 @@ ul.big-titles{
 .team-block{
 	display: inline-block;
 	padding: 0 50px;
-	width: 50%;
-	float: left;
 	&:first-child{
 		padding-left: 0;
 	}
@@ -1779,6 +1835,16 @@ ul.big-titles{
 				opacity: 1;
 			}
 		}
+	}
+}
+
+.team-list{
+	.owl-item{
+		text-align: center;
+	}
+	.owl-controls{
+		position: relative;
+		top:30px;
 	}
 }
 

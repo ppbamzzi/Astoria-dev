@@ -87,29 +87,34 @@ jQuery(document).ready(function() {
   })
 
   /* Fixed Header */
-  $(function(){
-   var shrinkHeader = $('.header').outerHeight();
-    $(window).scroll(function() {
-      var scroll = getCurrentScroll();
-        if ( scroll >= shrinkHeader ) {
-             $('.header').addClass('fixed');
-          }
-          else {
-              $('.header').removeClass('fixed');
-          }
-    });
-  function getCurrentScroll() {
-      return window.pageYOffset || document.documentElement.scrollTop;
+    $(function(){
+       var shrinkHeader = $('.header').outerHeight();
+        $(window).scroll(function() {
+          var scroll = getCurrentScroll();
+            if ( scroll >= shrinkHeader ) {
+                 $('.header').addClass('fixed');
+              }
+              else {
+                  $('.header').removeClass('fixed');
+              }
+        });
+        function getCurrentScroll() {
+        return window.pageYOffset || document.documentElement.scrollTop;
       }
-  });
+    });
 
-$("#testimonial-slider").owlCarousel({
-  singleItem: true,
-  autoPlay : 3000
-});
+    $("#testimonial-slider").owlCarousel({
+      singleItem: true,
+      autoPlay : 3000
+    });
 
-$(".a_carousel").owlCarousel({
-  singleItem: true
-});
+    $(".team-list").owlCarousel({
+        autoPlay : 3000,
+        items : 2
+    });
+
+    $(".a_carousel").owlCarousel({
+      singleItem: true
+    });
 
 });	

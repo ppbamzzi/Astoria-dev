@@ -3,8 +3,8 @@
 =            Active Background Color            =
 ===============================================*/
 
-.blue-active-color .main-menu ul > li.current-parent > a,
-.blue-active-color .main-menu ul > li > a:hover,
+.blue-active-color .main-menu > ul > li.current-parent > a,
+.blue-active-color .main-menu > ul > li > a:hover,
 .blue-active-color header.header .header-right a:hover, 
 .blue-active-color header.header .header-right div.menu-icon:hover,
 .blue-active-color .btn-default.filled,

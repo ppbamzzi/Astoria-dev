@@ -1,33 +1,55 @@
 .banner{
 	position: relative;
-	margin:30px 15px;
+	margin:30px 15px 0;
 	.banner-wrap{
 		position: absolute;
 		bottom: 0;
 		width: 100%;
 		padding: 2.5vw;
+		left: 0;
+		z-index: 1;
+		.transition();
 		h5,h3,p{
 			color: #fff;
 		}
 		h5{
 			font-size: 14px;
 			text-transform: uppercase;
-			font-weight: 500;
+			font-weight: 700;
 			line-height: 28px;
-			letter-spacing: 5px;
-			margin-bottom: 10px;
+			letter-spacing: 6px;
+			margin-bottom: 20px;
 		}
 		h3{
 			font-size: 30px;
 			line-height: 24px;
 			text-transform: capitalize;
-			font-weight: 600;
-			letter-spacing: 1px;
-			margin-bottom: 20px;
+			font-weight: 800;
+			letter-spacing: 0.5px;
+			margin-bottom: 30px;
 		}
 		p{
 			font-family: "Open Sans", sans-serif;
 			opacity: 0.8;
+		}
+	}
+	.img-wrap{
+		background-color: #000;
+		backface-visibility: hidden;
+		img{
+			display: block;
+			.transition();
+			backface-visibility: hidden;
+		}
+	}
+	&:hover{
+		.banner-wrap{
+			bottom:5vh;
+		}
+		.img-wrap{
+			img{
+				opacity:0.75;
+			}
 		}
 	}
 }
