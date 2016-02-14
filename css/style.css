@@ -392,6 +392,13 @@ section .f-column {
 section .f-column p {
   margin-bottom: 45px;
 }
+section .f-column.after-images {
+  padding-left: 3.5vw;
+  padding-right: 13vw;
+}
+section .f-column.active-bg p {
+  opacity: 0.8;
+}
 section .chees-block {
   padding: 0;
   position: relative;
@@ -464,8 +471,8 @@ section .our-projects-bg .title-block .separator {
 section .doctor-testimonials {
   background-image: url(../assets/doctor-testimonial.jpg);
   background-size: cover;
-  padding-top: 12vw;
-  padding-bottom: 12vw;
+  padding-top: 15vw;
+  padding-bottom: 15vw;
 }
 section#about-us {
   min-height: 34vw;
@@ -1108,6 +1115,18 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   display: inline-block;
   margin-right: 30px;
 }
+.slider-list li span {
+  width: 60px;
+  height: 60px;
+  background-color: #17c4ee;
+  border-radius: 4px 5px 5px 4px;
+  color: #fff;
+  font-size: 32px;
+  line-height: 35px;
+  padding: 12px;
+  text-align: center;
+  display: inline-block;
+}
 @media only screen and (max-width: 992px) {
   .slider-mask .title-block h2 {
     font-size: 46px;
@@ -1199,6 +1218,7 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 }
 .chess-icons .icon_box h5 {
   font-size: 26px;
+  font-weight: 700;
 }
 .chess-icons .icon_box [class^="icon-"] {
   font-size: 44px;
@@ -1330,7 +1350,7 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 .icon_box-bordered li span {
   margin-right: 25px;
   position: relative;
-  top: -35px;
+  top: -20px;
   float: left;
   font-size: 40px;
 }
@@ -1363,6 +1383,13 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   font-weight: bold;
   color: #f98f31;
 }
+.block-with-icon.doctor-block > span {
+  font-size: 44px;
+  margin-right: 20px;
+  display: table;
+  float: left;
+  line-height: 75px;
+}
 @media only screen and (max-width: 1399px) {
   .bordered-mask {
     border: none;
@@ -1387,13 +1414,16 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 }
 .banner {
   position: relative;
-  margin: 30px 15px;
+  margin: 30px 15px 0;
 }
 .banner .banner-wrap {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 2.5vw;
+  left: 0;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
 }
 .banner .banner-wrap h5,
 .banner .banner-wrap h3,
@@ -1403,22 +1433,37 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 .banner .banner-wrap h5 {
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 28px;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
 }
 .banner .banner-wrap h3 {
   font-size: 30px;
   line-height: 24px;
   text-transform: capitalize;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 30px;
 }
 .banner .banner-wrap p {
   font-family: "Open Sans", sans-serif;
   opacity: 0.8;
+}
+.banner .img-wrap {
+  background-color: #000;
+  backface-visibility: hidden;
+}
+.banner .img-wrap img {
+  display: block;
+  transition: all 0.2s ease-in-out;
+  backface-visibility: hidden;
+}
+.banner:hover .banner-wrap {
+  bottom: 5vh;
+}
+.banner:hover .img-wrap img {
+  opacity: 0.75;
 }
 .list-with-icon li {
   position: relative;
@@ -1513,6 +1558,12 @@ ul.with-images.with-padding li {
 }
 ul.dotted {
   margin-bottom: 40px;
+}
+ul.dotted h5 {
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 ul.dotted li {
   line-height: 32px;
@@ -1629,8 +1680,6 @@ ul.big-titles li h6 {
 .team-block {
   display: inline-block;
   padding: 0 50px;
-  width: 50%;
-  float: left;
 }
 .team-block:first-child {
   padding-left: 0;
@@ -1703,6 +1752,13 @@ ul.big-titles li h6 {
 .team-block .team-wrap:hover .phone,
 .team-block .team-wrap:hover .share-icons {
   opacity: 1;
+}
+.team-list .owl-item {
+  text-align: center;
+}
+.team-list .owl-controls {
+  position: relative;
+  top: 30px;
 }
 @media only screen and (min-width: 1400px) {
   .team-block .team-wrap {
