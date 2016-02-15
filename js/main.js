@@ -112,6 +112,10 @@ jQuery(document).ready(function() {
         autoPlay : 3000,
         items : 2
     });
+    $(".build-exp-carousel").owlCarousel({
+        items : 4,
+        loop : true
+    });
 
     $(".a_carousel").owlCarousel({
       singleItem: true

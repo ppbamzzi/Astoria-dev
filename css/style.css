@@ -358,6 +358,10 @@ strong {
 .btn-default.filled:before {
   display: none;
 }
+.btn-default.smaller {
+  font-size: 11px;
+  padding: 14px 30px;
+}
 section {
   padding-top: 9.4vw;
   display: inline-block;
@@ -485,6 +489,10 @@ section#about-us {
 section#moved-banners {
   padding-left: 7vw;
   padding-right: 7vw;
+}
+section#experience {
+  background-image: url(../assets/build-exp.jpg);
+  background-size: cover;
 }
 @media only screen and (min-width: 1400px) {
   .block-right-align {
@@ -1324,7 +1332,7 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
 }
 .icon_box-chees li .btn-default {
   font-size: 11px;
-  padding: 15px 30px;
+  padding: 14px 30px;
   display: inline-block;
 }
 .icon_box-chees .icon_wrap {
@@ -2238,6 +2246,30 @@ section .contact-adress .list-with-icon li strong {
 .a_carousel {
   position: relative;
   height: 100%;
+}
+.build-exp-carousel .item {
+  background-color: #fff;
+  margin: 0 15px;
+}
+.build-exp-carousel .item img {
+  width: 100%;
+}
+.build-exp-carousel .item .post-wrap {
+  padding: 30px 55px 50px;
+}
+.build-exp-carousel .item h4 {
+  color: #4a4a4a;
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.build-exp-carousel .item p {
+  margin-bottom: 25px;
+}
+.build-exp-carousel .item .btn-default {
+  display: inline-block;
 }
 .footer {
   display: inline-block;
