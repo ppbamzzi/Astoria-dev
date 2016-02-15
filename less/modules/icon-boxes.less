@@ -67,6 +67,74 @@
 	}
 }
 
+.icon_box-chees{
+	display: inline-block;
+	width:100%;
+	li{
+		width:25%;
+		float: left;
+		padding:100px 50px;
+		background-color: #fff;
+		&:nth-child(even){
+			background-color: rgb(244, 244, 244);
+		}
+		h5{
+			color: rgb(74, 74, 74);
+			font-family: "Open Sans", sans-serif;
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 26px;
+			width: 50%;
+		}
+		p{
+			margin-bottom: 30px;
+		}
+		.btn-default{
+			font-size:11px;
+			padding:15px 30px;
+			display: inline-block;
+		}
+	}
+	.icon_wrap{
+		display: inline-block;
+		width:100%;
+		margin-bottom: 30px;
+		span{
+			font-size:44px;
+		}
+	}
+	&.right-icon{
+		.icon_wrap{
+			h5{
+				float: left;
+			}
+			span{
+				float: right;
+			}
+		}
+	}
+	&.left-icon{
+		.icon_wrap{
+			h5{
+				float: right;
+			}
+			span{
+				float: left;
+			}
+		}
+	}
+	&.reverse{
+		li{
+			&:nth-child(even){
+				background-color: #fff;
+			}
+			&:nth-child(odd){
+				background-color: rgb(244, 244, 244);
+			}
+		}
+	}
+}
+
 .bordered-mask{
 	width: 100%;
 	height: 100%;
