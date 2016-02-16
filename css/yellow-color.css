@@ -1,0 +1,33 @@
+
+/*===============================================
+=            Active Background Color            =
+===============================================*/
+.btn-default.filled,.main-menu ul > li.current-parent > a,
+.main-menu >ul > li > a:hover,
+.share-icons.active ul li i{
+    background-color: rgb(237, 192, 9);
+}
+
+/*=====  End of Active Background Color  ======*/
+
+
+/*===============================================
+=              Active Font Color               =
+===============================================*/
+.top-bar .top-bar-text i,.active,
+.title-block h4.active,
+.icon_box_image:hover .icon_box-inner h3{
+    color: rgb(237, 192, 9) !important;
+}
+
+/*========  End of Active Font Color  ========*/
+
+
+/*===========================================
+=            Active Border Color            =
+===========================================*/
+.btn-default.filled{
+    border-color: rgb(237, 192, 9);
+}
+
+/*=====  End of Active Border Color  ======*/
