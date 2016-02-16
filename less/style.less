@@ -24,6 +24,14 @@
     align-items: center;
 }
 
+.v-align-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .table-container{
     display: table;
     >div{
@@ -73,6 +81,10 @@
     clear: both;
 }
 
+
+.dark-bg{
+    background-color: #292929;
+}
 p.under-title-text{
     color: rgb(95, 95, 95);
     font-size: 16px;
@@ -305,6 +317,7 @@ b, strong{
 	&.smaller{
 		font-size: 11px;
 		padding: 14px 30px;
+		display: inline-block;
 	}
 }
 section{
@@ -515,6 +528,9 @@ header.header{
 	text-align: center;
 	z-index: 1;
 	.transition();
+	&.not-fixed{
+		position: absolute !important;
+	}
 	.logo,
 	.main-menu,
 	.header-right{
@@ -1151,6 +1167,10 @@ header.header-type-2{
 		line-height: 34px;
 		text-transform: uppercase;
 	}
+	p{
+		margin-top: 25px;
+		margin-bottom: 25px !important;
+	}
 }
 
 @media only screen and (max-width:1399px){
@@ -1598,6 +1618,66 @@ header.header-type-2{
 	}
 }
 
+.icon_box_image{
+	position: relative;
+	overflow: hidden;
+	img{
+		width:100%;
+		display: block;
+		transition: transform 8s linear;
+	}
+	.icon_box-inner{
+		position: absolute;
+		left: 30px;
+		right: 30px;
+		bottom: 30px;
+		top: 30px;
+		padding: 50px 10vw;
+		.v-align-child();
+		border:1px solid rgba(255,255,255,0);
+		.transition();
+		span{
+			font-size:60px;
+			display: inline-block;
+			margin-bottom: 20px;
+			.transition();
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+		h3{
+			font-size:30px;
+			letter-spacing:0.5px;
+			color: #fff;
+			font-weight:700;
+			margin-bottom: 30px;
+			.transition();
+		}
+		p{
+			color: #fff;
+			opacity: 0.8;
+		}
+	}
+	.medium-title-block{
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	&:hover{
+		img{
+			transform: scale(2);
+		}
+		.icon_box-inner{
+			border:1px solid rgba(255,255,255,0.3);
+			span{
+				transform: scale(1.25) translate3d(5px, -5px, 0);
+			}
+			h3{
+				color: @active-color;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width:1399px){
 	.bordered-mask{
 		border:none;
@@ -1994,6 +2074,47 @@ ul.big-titles{
 	.owl-controls{
 		position: relative;
 		top:30px;
+	}
+}
+
+.team-block-default{
+	.team-img{
+		margin-bottom: 25px;
+		display: block;
+	}
+	.team-inner{
+		h5{
+			font-size:18px;
+			font-weight:800;
+			line-height: 20px;
+			letter-spacing:0.5px;
+			color: #3c3c3c;
+			margin-bottom: 15px;
+		}
+		span{
+			text-transform: uppercase;
+			color: #898989;
+			font-size:13px;
+			letter-spacing:0.5px;
+			display: block;
+			margin-bottom: 15px;
+		}
+		p{
+			margin-bottom: 30px;
+		}
+	}
+	.share-icons{
+		li{
+			&:first-child{
+				margin-left: 0;
+			}
+			i{
+				color: #fff;
+				&:hover{
+					opacity: 0.7;
+				}
+			}
+		}
 	}
 }
 
