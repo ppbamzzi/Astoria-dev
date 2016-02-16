@@ -2254,6 +2254,9 @@ section .contact-adress .list-with-icon li strong {
     padding-right: 10px;
   }
 }
+.gallery-item {
+  width: 20%;
+}
 .blog-post .post-image {
   margin-bottom: 10px;
   display: block;

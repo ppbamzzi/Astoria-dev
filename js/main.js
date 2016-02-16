@@ -121,4 +121,30 @@ jQuery(document).ready(function() {
       singleItem: true
     });
 
-});	
+});
+
+// external js: isotope.pkgd.js
+
+$(document).ready(function() {
+  $('.gallery').isotope({
+    itemSelector: '.gallery-item'
+  });
+  $('#filter a').click(function(){
+    $('#filter a').removeClass('current');
+
+    $(this).addClass('current');
+
+    var selector = $(this).attr('data-filter');
+
+    $('.gallery').isotope({
+      filter: selector,
+      animationOptions: {
+      duration: 1000,
+      easing: 'easeOutQuart',
+      queue: false
+      }
+    });
+    return false;
+  });
+
+});
