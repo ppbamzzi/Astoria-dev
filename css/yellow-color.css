@@ -4,7 +4,9 @@
 ===============================================*/
 .btn-default.filled,.main-menu ul > li.current-parent > a,
 .main-menu >ul > li > a:hover,
-.share-icons.active ul li i{
+.share-icons.active ul li i,
+#filter li a.current,
+.cta-title.active a{
     background-color: rgb(237, 192, 9);
 }
 
