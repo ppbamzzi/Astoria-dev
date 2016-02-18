@@ -4,8 +4,15 @@
 ===============================================*/
 .btn-default.filled,.main-menu ul > li.current-parent > a,
 .main-menu >ul > li > a:hover,
-.share-icons.active ul li i{
-    background-color: rgb(237, 192, 9);
+.share-icons.active ul li i,
+#filter li a.current,
+.cta-title.active a,
+.price-list li h4:before,
+.nav-tabs > li.active a,
+.nav-tabs > li a:hover,
+.separator.small,
+.preloader .ball{
+    background-color: rgb(237, 192, 9) !important;
 }
 
 /*=====  End of Active Background Color  ======*/
@@ -26,7 +33,9 @@
 /*===========================================
 =            Active Border Color            =
 ===========================================*/
-.btn-default.filled{
+.btn-default.filled,
+.btn-default.filled:hover,
+.bordered-block{
     border-color: rgb(237, 192, 9);
 }
 

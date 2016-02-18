@@ -70,10 +70,24 @@ img{
 }
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.5px;
 	&.capitalize{
 		text-transform: capitalize !important;
 	}
+	&.bolder{
+		font-weight: 800;
+		color: rgb(74, 74, 74);
+		margin-bottom: 25px;
+		line-height: 32px;
+	}
 }
+h1{font-size: 36px;}
+h2{font-size: 30px;}
+h3{font-size: 24px;}
+h4{font-size: 18px;}
+h5{font-size: 14px;}
+h6{font-size: 12px;}
+
 p{
 	line-height: 1.8;
 }
@@ -112,5 +126,10 @@ b, strong{
 
 .active{
 	color: @active-color;
+}
+
+.big-spacing{
+	padding-left: 40px;
+	padding-right: 40px;
 }
 /*=====  End of Base Styles  ======*/

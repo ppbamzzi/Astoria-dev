@@ -23,6 +23,7 @@ module.exports = function(grunt) {
           'less/modules/share.less',
           'less/modules/progress-bar.less',
           'less/modules/gallery.less',
+          'less/modules/tabs.less',
           'less/modules/blog-posts.less',
           'less/modules/carousels.less',
           'less/modules/footer.less',
