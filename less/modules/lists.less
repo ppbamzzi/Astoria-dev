@@ -19,6 +19,22 @@
 		margin-top: 15px;
 		margin-bottom: 25px !important;
 	}
+	&.contact-list{
+		margin-top: 20px;
+		li{
+			border-bottom: none !important;
+			margin-bottom: 40px !important;
+			padding-left: 50px;
+			span{
+				top: -8px;
+			}
+			strong{
+				text-transform: uppercase;
+
+				padding-right: 3px;
+			}
+		}
+	}
 }
 
 ul.with-images{
@@ -167,6 +183,74 @@ ul.big-titles{
 			font-size: 16px;
 		}
 	}
+}
+
+.price-list{
+	li{
+		padding: 40px 0;
+		display: inline-block;
+		width: 100%;
+		position: relative;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		color: #fff;
+		h4{
+			font-size: 22px;
+			font-weight: 800;
+			letter-spacing: 0.5px;
+			position: relative;
+			padding-left: 30px;
+			margin-bottom: 20px;
+			&:before{
+				content:"";
+				width: 14px;
+				height: 2px;
+				background-color: @active-color;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -2px;
+			}
+		}
+		p{
+			padding-left: 30px;
+			padding-right: 150px;
+			color: rgba(255, 255, 255, 0.8);
+			.transition();
+			span{
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -20px;
+				font-size: 22px;
+				font-weight: 700;
+				opacity: 1;
+				z-index: 1;
+				.transition();
+			}
+			.btn-default{
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -25px;
+				opacity: 0;
+				z-index: -1;
+				.transition();
+			}
+		}
+		&:hover{
+			p{
+				color: #fff;
+				.btn-default{
+					opacity: 1;
+					z-index: 1;
+				}
+				span{
+					opacity: 0;
+					z-index: -1;
+				}
+			}
+		}
+	}	
 }
 
 @media only screen and (min-width:1200px) and (max-width:1399px){

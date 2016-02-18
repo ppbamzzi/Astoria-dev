@@ -1,0 +1,32 @@
+.nav-tabs{
+	border-bottom: none;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	>li{
+		float: none;
+		display: inline-block;
+		margin-left: 5px;
+		margin-right: 5px;
+		a{
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 13px;
+			padding: 13px 18px;
+			border-radius: 0;
+			color: rgba(255, 255, 255, 0.6);
+			border:none !important;
+			.transition();
+			&:hover{
+				color: #fff !important;
+				background-color: @active-color !important;
+			}
+		}
+		&.active{
+			a{
+				color: #fff !important;
+				background-color: @active-color !important;
+			}
+		}
+	}
+}

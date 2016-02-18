@@ -146,5 +146,9 @@ $(document).ready(function() {
     });
     return false;
   });
-
 });
+
+$('#price-tabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
