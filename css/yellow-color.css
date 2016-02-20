@@ -11,7 +11,10 @@
 .nav-tabs > li.active a,
 .nav-tabs > li a:hover,
 .separator.small,
-.preloader .ball{
+.preloader .ball,
+.active-bg-block,
+.owl-controls .owl-page.active,
+.copyrights .share-icons li a i:hover{
     background-color: rgb(237, 192, 9) !important;
 }
 
@@ -21,6 +24,7 @@
 /*===============================================
 =              Active Font Color               =
 ===============================================*/
+a:focus, a:hover,
 .top-bar .top-bar-text i,.active,
 .title-block h4.active,
 .icon_box_image:hover .icon_box-inner h3{
@@ -35,7 +39,8 @@
 ===========================================*/
 .btn-default.filled,
 .btn-default.filled:hover,
-.bordered-block{
+.bordered-block,
+.owl-controls .owl-page.active{
     border-color: rgb(237, 192, 9);
 }
 
