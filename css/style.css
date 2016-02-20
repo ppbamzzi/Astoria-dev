@@ -350,6 +350,7 @@ strong {
   font-size: 13px;
   padding: 15px 50px;
   font-weight: 700;
+  display: inline-block;
   z-index: 1;
   letter-spacing: 1px;
   background-color: transparent;
@@ -494,6 +495,13 @@ section .chees-block .list-with-icon li [class^="icon-"] {
   min-width: 42px;
   text-align: center;
 }
+section .active-bg-block {
+  padding: 80px 70px;
+}
+section .bg-white {
+  background-color: #fff;
+  padding: 80px 70px;
+}
 section.fixed-bg {
   background-attachment: fixed;
 }
@@ -551,6 +559,9 @@ section#experience {
 section#price-list {
   background-image: url(../assets/builder-tabs-bg.jpg);
   background-size: cover;
+}
+section#build-testimonials {
+  background-image: url(../assets/builder-testimonial-bg.jpg);
 }
 @media only screen and (min-width: 1400px) {
   .block-right-align {
@@ -1618,8 +1629,8 @@ header.header-type-2 .menu-icon:hover #nav-icon span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   border: 1px solid rgba(255, 255, 255, 0);
   transition: all 0.2s ease-in-out;
 }
@@ -2383,6 +2394,9 @@ ul.big-titles li h6 {
 .gallery-item {
   width: 20%;
 }
+.gallery-item img {
+  width: 100%;
+}
 #filter {
   text-align: center;
   margin-bottom: 80px;
@@ -2511,6 +2525,27 @@ ul.big-titles li h6 {
   color: #3c3c3c;
   font-size: 18px;
   font-weight: 700;
+}
+.testimonial .testimonial-left-author {
+  display: inline-block;
+  min-width: 240px;
+  text-align: left;
+}
+.testimonial .testimonial-left-author img {
+  float: left;
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+.testimonial .testimonial-left-author .author-info {
+  padding-top: 10px;
+}
+.testimonial .testimonial-left-author b {
+  margin-bottom: 15px;
+  display: inline-block;
+}
+#quotes-slider i {
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 .owl-controls {
   width: 100%;

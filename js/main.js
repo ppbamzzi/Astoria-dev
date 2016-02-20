@@ -107,6 +107,9 @@ jQuery(document).ready(function() {
       singleItem: true,
       autoPlay : 3000
     });
+    $("#quotes-slider").owlCarousel({
+        singleItem: true
+    });
 
     $(".team-list").owlCarousel({
         autoPlay : 3000,
