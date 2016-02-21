@@ -254,6 +254,7 @@ header.header-type-2{
 		.flexbox-between();
 		padding-left: 0;
 		padding-right: 0;
+		.transition();
 		>div{
 			width:50%;
 		}
@@ -309,8 +310,22 @@ header.header-type-2{
 		position: static;
 		transform:none;
 	}
-	.main-menu >ul > li > a{
-		padding:46px 25px;
+	.main-menu >ul > li{
+		margin-bottom: 0;
+		> a{
+			padding:46px 25px;
+		}
+	}
+	&.fixed{
+		.top-bar{
+			margin-top: -68px;
+			>div{
+				color: #5f5f5f;
+			}
+			.share-icons li i{
+				color: #5f5f5f;
+			}
+		}
 	}
 }
 
