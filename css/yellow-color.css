@@ -18,6 +18,9 @@
     background-color: rgb(237, 192, 9) !important;
 }
 
+.btn-default.filled:hover{
+    background-color: #D7AC00 !important;
+}
 /*=====  End of Active Background Color  ======*/
 
 
@@ -27,7 +30,8 @@
 a:focus, a:hover,
 .top-bar .top-bar-text i,.active,
 .title-block h4.active,
-.icon_box_image:hover .icon_box-inner h3{
+.icon_box_image:hover .icon_box-inner h3,
+.build-exp-carousel .item:hover h4{
     color: rgb(237, 192, 9) !important;
 }
 
@@ -38,10 +42,12 @@ a:focus, a:hover,
 =            Active Border Color            =
 ===========================================*/
 .btn-default.filled,
-.btn-default.filled:hover,
 .bordered-block,
 .owl-controls .owl-page.active{
     border-color: rgb(237, 192, 9);
 }
 
+.btn-default.filled:hover{
+    border-color: #D7AC00;
+}
 /*=====  End of Active Border Color  ======*/

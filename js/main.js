@@ -80,7 +80,12 @@ jQuery(document).ready(function() {
     // make it unique to apply your CSS animations just to this exact popup
     mainClass: 'mfp-fade'
   });
-  
+
+$('.popup-gallery-item').magnificPopup({
+    removalDelay: 500,
+    mainClass: 'mfp-fade'
+});
+
   /* Side Menu */
   $('.menu-icon').click(function sideMenu () {
     $('body').toggleClass('menu-opened');
@@ -150,7 +155,9 @@ $(document).ready(function() {
     return false;
   });
 });
-
+$(window).on('load', function(){
+    $('.gallery').isotope('layout')
+});
 $('#price-tabs a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')

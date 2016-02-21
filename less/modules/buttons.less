@@ -51,9 +51,12 @@
 		background-color: @active-color;
 		border-color: @active-color;
 		&:hover{
-			color: #fff;
+			color: #fff !important;
 			background-color: darken(@active-color, 10%);
 			border-color: darken(@active-color, 10%);
+		}
+		&:focus{
+			color: #fff !important;
 		}
 		&:before{
 			display: none;
